@@ -63,10 +63,8 @@ async fn main() {
     let app = Router::new()
         // `GET /` goes to `root`
         .route("/", get(get_root))
-        .route(
-            "/f/:b64_rotki_url",
-            get(get_rotki).post(post_exchange_token),
-        )
+        .route("/f/:b64_rotki_url", post(post_exchange_token))
+        .route("/f/:b64_rotki_url/accounts", get(get_rotki))
         .layer(tower_http::compression::CompressionLayer::new())
         .with_state(app_config.clone())
         .layer(service_conventions::tracing_http::trace_layer(
