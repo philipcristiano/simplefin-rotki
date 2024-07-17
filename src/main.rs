@@ -123,9 +123,8 @@ async fn get_rotki(Path(params): Path<B64RotkiURL>) -> Result<Response, AppError
     let r = rotki::RotkiAPI::new(r_url);
     let balances = r.balances().await?;
     let sf = balances_to_sf(balances)?;
-    let s = serde_json::to_string(&sf)?;
 
-    Ok(s.into_response())
+    Ok(axum::Json(sf).into_response())
 }
 
 // Return the URL for this handler as the SimpleFin protocol POST's to here, but we don't need to
