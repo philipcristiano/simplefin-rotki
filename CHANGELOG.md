@@ -1,5 +1,53 @@
 # Changelog
 
+## [0.1.1](https://github.com/philipcristiano/simplefin-rotki/compare/v0.1.0...v0.1.1) (2025-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate anyhow to v1.0.94 ([#119](https://github.com/philipcristiano/simplefin-rotki/issues/119)) ([da64927](https://github.com/philipcristiano/simplefin-rotki/commit/da649274c52414deb44f485c2b22a26462a8a142))
+* **deps:** update rust crate anyhow to v1.0.95 ([#130](https://github.com/philipcristiano/simplefin-rotki/issues/130)) ([51eee0a](https://github.com/philipcristiano/simplefin-rotki/commit/51eee0a03e375e8b75826ee620246e0ed082a900))
+* **deps:** update rust crate axum to v0.7.9 ([#105](https://github.com/philipcristiano/simplefin-rotki/issues/105)) ([00e8d16](https://github.com/philipcristiano/simplefin-rotki/commit/00e8d163c5026d00d684b75df68151254c8eb268))
+* **deps:** update rust crate axum-extra to v0.9.5 ([#106](https://github.com/philipcristiano/simplefin-rotki/issues/106)) ([4d98be2](https://github.com/philipcristiano/simplefin-rotki/commit/4d98be2e475f1dafcf17a889a7fef33c92a89f39))
+* **deps:** update rust crate axum-extra to v0.9.6 ([#107](https://github.com/philipcristiano/simplefin-rotki/issues/107)) ([04a2b05](https://github.com/philipcristiano/simplefin-rotki/commit/04a2b05ea54dfd6f44ababdfec65e03d4b3bd227))
+* **deps:** update rust crate chrono to v0.4.39 ([#125](https://github.com/philipcristiano/simplefin-rotki/issues/125)) ([6326166](https://github.com/philipcristiano/simplefin-rotki/commit/63261669937b5bf552bef6734f685b44be838258))
+* **deps:** update rust crate clap to v4.5.21 ([#104](https://github.com/philipcristiano/simplefin-rotki/issues/104)) ([365d390](https://github.com/philipcristiano/simplefin-rotki/commit/365d39061e47df6f43947e2a6b13d33fdea457a7))
+* **deps:** update rust crate clap to v4.5.22 ([#120](https://github.com/philipcristiano/simplefin-rotki/issues/120)) ([a8c51c9](https://github.com/philipcristiano/simplefin-rotki/commit/a8c51c9af8fb4c12aacde68be2eae54b3abd0895))
+* **deps:** update rust crate clap to v4.5.23 ([#122](https://github.com/philipcristiano/simplefin-rotki/issues/122)) ([5e7b7ca](https://github.com/philipcristiano/simplefin-rotki/commit/5e7b7ca5b0b34c1cec18a9884a767dd45a77e716))
+* **deps:** update rust crate clap to v4.5.24 ([#142](https://github.com/philipcristiano/simplefin-rotki/issues/142)) ([150e41a](https://github.com/philipcristiano/simplefin-rotki/commit/150e41a424462752bfa158a4a572ad9f229d1218))
+* **deps:** update rust crate clap to v4.5.25 ([#146](https://github.com/philipcristiano/simplefin-rotki/issues/146)) ([bd8af16](https://github.com/philipcristiano/simplefin-rotki/commit/bd8af16c7cff47d4b223084edc590343a7cf4403))
+* **deps:** update rust crate clap to v4.5.26 ([#147](https://github.com/philipcristiano/simplefin-rotki/issues/147)) ([09c1eaf](https://github.com/philipcristiano/simplefin-rotki/commit/09c1eaff275c36990a6893f2a81c087603d08ddf))
+* **deps:** update rust crate clap to v4.5.27 ([#155](https://github.com/philipcristiano/simplefin-rotki/issues/155)) ([e030ec2](https://github.com/philipcristiano/simplefin-rotki/commit/e030ec2ccc2f0393f5b00d77b6a971393f64f183))
+* **deps:** update rust crate clap to v4.5.28 ([#160](https://github.com/philipcristiano/simplefin-rotki/issues/160)) ([54b5bef](https://github.com/philipcristiano/simplefin-rotki/commit/54b5bef20fe54ccf9c0a0a715115091a97c8e50d))
+* **deps:** update rust crate http to v1.2.0 ([#121](https://github.com/philipcristiano/simplefin-rotki/issues/121)) ([2096883](https://github.com/philipcristiano/simplefin-rotki/commit/20968835b33ba884d16b12471e5db8356c0bfa47))
+* **deps:** update rust crate reqwest to v0.12.10 ([#132](https://github.com/philipcristiano/simplefin-rotki/issues/132)) ([4ce4980](https://github.com/philipcristiano/simplefin-rotki/commit/4ce498072d8006ab5e481b4fe2f5ebb1f59b1cfa))
+* **deps:** update rust crate reqwest to v0.12.11 ([#133](https://github.com/philipcristiano/simplefin-rotki/issues/133)) ([44ad1df](https://github.com/philipcristiano/simplefin-rotki/commit/44ad1df2c3296e9677d00d8d5dea8119ad17775e))
+* **deps:** update rust crate reqwest to v0.12.12 ([#136](https://github.com/philipcristiano/simplefin-rotki/issues/136)) ([7d54e5f](https://github.com/philipcristiano/simplefin-rotki/commit/7d54e5f911326247b163fbd3c03fd70a9c0c4650))
+* **deps:** update rust crate serde to v1.0.215 ([#102](https://github.com/philipcristiano/simplefin-rotki/issues/102)) ([1d932d3](https://github.com/philipcristiano/simplefin-rotki/commit/1d932d372a80f9f55699a10b40858b0c18ee1002))
+* **deps:** update rust crate serde to v1.0.216 ([#126](https://github.com/philipcristiano/simplefin-rotki/issues/126)) ([accaed7](https://github.com/philipcristiano/simplefin-rotki/commit/accaed722e72596f9da2fd6445ab4cce2f423726))
+* **deps:** update rust crate serde to v1.0.217 ([#134](https://github.com/philipcristiano/simplefin-rotki/issues/134)) ([33e3c04](https://github.com/philipcristiano/simplefin-rotki/commit/33e3c04f8bae1ad3054e59ed5c9ff714c6959e69))
+* **deps:** update rust crate serde_json to v1.0.133 ([#108](https://github.com/philipcristiano/simplefin-rotki/issues/108)) ([bde9fe2](https://github.com/philipcristiano/simplefin-rotki/commit/bde9fe2134c62e8b3bf2912e6807039f3aa2850c))
+* **deps:** update rust crate serde_json to v1.0.134 ([#129](https://github.com/philipcristiano/simplefin-rotki/issues/129)) ([6eadf0c](https://github.com/philipcristiano/simplefin-rotki/commit/6eadf0cf8cd176d395e8d5163a0d257f6ea88b5d))
+* **deps:** update rust crate serde_json to v1.0.135 ([#143](https://github.com/philipcristiano/simplefin-rotki/issues/143)) ([63d9dd9](https://github.com/philipcristiano/simplefin-rotki/commit/63d9dd93d45ce456071afb4fac9a02cd71c9b877))
+* **deps:** update rust crate serde_json to v1.0.136 ([#152](https://github.com/philipcristiano/simplefin-rotki/issues/152)) ([147c0a8](https://github.com/philipcristiano/simplefin-rotki/commit/147c0a82745ccaa17424f46233fa474448514584))
+* **deps:** update rust crate serde_json to v1.0.137 ([#153](https://github.com/philipcristiano/simplefin-rotki/issues/153)) ([b40c847](https://github.com/philipcristiano/simplefin-rotki/commit/b40c847f29b840955aab69f9cbb5ff26671cc9fc))
+* **deps:** update rust crate serde_json to v1.0.138 ([#159](https://github.com/philipcristiano/simplefin-rotki/issues/159)) ([4b1cc9d](https://github.com/philipcristiano/simplefin-rotki/commit/4b1cc9d66d066ecb74cc0d8720894615f43812d1))
+* **deps:** update rust crate serde-this-or-that to 0.5.0 ([#157](https://github.com/philipcristiano/simplefin-rotki/issues/157)) ([c27d7e1](https://github.com/philipcristiano/simplefin-rotki/commit/c27d7e1feca7e60c830dcb241cab2a1f7902407d))
+* **deps:** update rust crate service_conventions to 0.0.24 ([#115](https://github.com/philipcristiano/simplefin-rotki/issues/115)) ([05c4275](https://github.com/philipcristiano/simplefin-rotki/commit/05c4275f60c0e53d0dba558ba79e4c708027344f))
+* **deps:** update rust crate service_conventions to 0.0.25 ([#140](https://github.com/philipcristiano/simplefin-rotki/issues/140)) ([e5f2496](https://github.com/philipcristiano/simplefin-rotki/commit/e5f24965fa16d5fad57ada4b97b79b941063ee67))
+* **deps:** update rust crate service_conventions to 0.0.26 ([#141](https://github.com/philipcristiano/simplefin-rotki/issues/141)) ([c418356](https://github.com/philipcristiano/simplefin-rotki/commit/c418356bef6fae28ad5f2ff1b95fcbd211dd9cc4))
+* **deps:** update rust crate tokio to v1.42.0 ([#118](https://github.com/philipcristiano/simplefin-rotki/issues/118)) ([9c78546](https://github.com/philipcristiano/simplefin-rotki/commit/9c785460a32c0efeb9f8f1a21f7e7183b8377286))
+* **deps:** update rust crate tokio to v1.43.0 ([#145](https://github.com/philipcristiano/simplefin-rotki/issues/145)) ([17aac9f](https://github.com/philipcristiano/simplefin-rotki/commit/17aac9f386e8535fb80a965889f15ccac0dbc13d))
+* **deps:** update rust crate toml to v0.8.20 ([#164](https://github.com/philipcristiano/simplefin-rotki/issues/164)) ([78fa885](https://github.com/philipcristiano/simplefin-rotki/commit/78fa885c26053f2d9b38490136a86e902f52872e))
+* **deps:** update rust crate tower-http to v0.6.2 ([#111](https://github.com/philipcristiano/simplefin-rotki/issues/111)) ([1e73e5f](https://github.com/philipcristiano/simplefin-rotki/commit/1e73e5f709aecd0ec6888e5dcb3a182977d0b28e))
+* **deps:** update rust crate tracing to v0.1.41 ([#114](https://github.com/philipcristiano/simplefin-rotki/issues/114)) ([806ff5c](https://github.com/philipcristiano/simplefin-rotki/commit/806ff5c1a99e19cc847502d7507af7a4b3608009))
+* **deps:** update rust crate url to v2.5.4 ([#112](https://github.com/philipcristiano/simplefin-rotki/issues/112)) ([b3edc18](https://github.com/philipcristiano/simplefin-rotki/commit/b3edc182bf6720fdb914df64d18c1b528b44bdbc))
+* **deps:** update rust crate uuid to v1.11.1 ([#149](https://github.com/philipcristiano/simplefin-rotki/issues/149)) ([6bef5d3](https://github.com/philipcristiano/simplefin-rotki/commit/6bef5d3dedfced39c7489f00abe5796c34600b62))
+* **deps:** update rust crate uuid to v1.12.0 ([#151](https://github.com/philipcristiano/simplefin-rotki/issues/151)) ([b2b6890](https://github.com/philipcristiano/simplefin-rotki/commit/b2b689052c4616cb3df71d7afd6032343f6360d5))
+* **deps:** update rust crate uuid to v1.12.1 ([#156](https://github.com/philipcristiano/simplefin-rotki/issues/156)) ([cb767fb](https://github.com/philipcristiano/simplefin-rotki/commit/cb767fbb2941b2449ee21bb33ba64bbebfb7a719))
+* **deps:** update rust crate uuid to v1.13.0 ([#162](https://github.com/philipcristiano/simplefin-rotki/issues/162)) ([2d23faa](https://github.com/philipcristiano/simplefin-rotki/commit/2d23faad69d17cdf5922938168ad994d0433cf8d))
+* **deps:** update rust crate uuid to v1.13.1 ([#163](https://github.com/philipcristiano/simplefin-rotki/issues/163)) ([c591f7e](https://github.com/philipcristiano/simplefin-rotki/commit/c591f7e976e8dd2c81aeba1eb08e4433320678c9))
+
 ## 0.1.0 (2024-11-11)
 
 
