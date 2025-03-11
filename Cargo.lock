@@ -218,7 +218,7 @@ dependencies = [
  "axum-macros 0.4.2",
  "bytes",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "hyper 1.6.0",
@@ -253,7 +253,7 @@ dependencies = [
  "bytes",
  "form_urlencoded",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "hyper 1.6.0",
@@ -286,7 +286,7 @@ dependencies = [
  "async-trait",
  "bytes",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "mime",
@@ -306,7 +306,7 @@ checksum = "df1362f362fd16024ae199c1970ce98f9661bf5ef94b9808fee734bc3698b733"
 dependencies = [
  "bytes",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "mime",
@@ -326,7 +326,7 @@ checksum = "077959a7f8cf438676af90b483304528eb7e16eadadb7f44e9ada4f9dceb9e62"
 dependencies = [
  "axum-core 0.4.5",
  "chrono",
- "http 1.2.0",
+ "http 1.3.0",
  "mime_guess",
  "rust-embed",
  "tower-service",
@@ -343,7 +343,7 @@ dependencies = [
  "bytes",
  "fastrand",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "mime",
@@ -1168,7 +1168,7 @@ dependencies = [
  "fnv",
  "futures-core",
  "futures-sink",
- "http 1.2.0",
+ "http 1.3.0",
  "indexmap 2.7.1",
  "slab",
  "tokio",
@@ -1234,9 +1234,9 @@ dependencies = [
 
 [[package]]
 name = "http"
-version = "1.2.0"
+version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f16ca2af56261c99fba8bac40a10251ce8188205a4c448fbb745a2e4daa76fea"
+checksum = "0a761d192fbf18bdef69f5ceedd0d1333afcbda0ee23840373b8317570d23c65"
 dependencies = [
  "bytes",
  "fnv",
@@ -1261,7 +1261,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1efedce1fb8e6913f23e0c92de8e62cd5b772a67e7b3946df930a62566c93184"
 dependencies = [
  "bytes",
- "http 1.2.0",
+ "http 1.3.0",
 ]
 
 [[package]]
@@ -1272,7 +1272,7 @@ checksum = "793429d76616a256bcb62c2a2ec2bed781c8307e797e2598c50010f2bee2544f"
 dependencies = [
  "bytes",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "pin-project-lite",
 ]
@@ -1323,7 +1323,7 @@ dependencies = [
  "futures-channel",
  "futures-util",
  "h2 0.4.8",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "httparse",
  "httpdate",
@@ -1355,7 +1355,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2d191583f3da1305256f22463b9bb0471acad48a4e534a5218b9963e9c1f59b2"
 dependencies = [
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "hyper 1.6.0",
  "hyper-util",
  "rustls 0.23.23",
@@ -1389,7 +1389,7 @@ dependencies = [
  "bytes",
  "futures-channel",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "hyper 1.6.0",
  "pin-project-lite",
@@ -1715,7 +1715,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df518b75016b4289cdddffa1b01f2122f4a49802c93191f3133f6dc2472ebcaa"
 dependencies = [
  "axum-core 0.4.5",
- "http 1.2.0",
+ "http 1.3.0",
  "itoa",
  "maud_macros",
 ]
@@ -1793,7 +1793,7 @@ dependencies = [
  "bytes",
  "encoding_rs",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "httparse",
  "memchr",
  "mime",
@@ -1965,7 +1965,7 @@ checksum = "10a8a7f5f6ba7c1b286c2fbca0454eaba116f63bbe69ed250b642d36fbb04d80"
 dependencies = [
  "async-trait",
  "bytes",
- "http 1.2.0",
+ "http 1.3.0",
  "opentelemetry",
  "reqwest 0.12.12",
 ]
@@ -1978,7 +1978,7 @@ checksum = "91cf61a1868dacc576bf2b2a1c3e9ab150af7272909e80085c3173384fe11f76"
 dependencies = [
  "async-trait",
  "futures-core",
- "http 1.2.0",
+ "http 1.3.0",
  "opentelemetry",
  "opentelemetry-http",
  "opentelemetry-proto",
@@ -2562,7 +2562,7 @@ dependencies = [
  "futures-channel",
  "futures-core",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "hyper 1.6.0",
@@ -3092,7 +3092,7 @@ dependencies = [
  "axum-core 0.5.0",
  "chrono",
  "email_address",
- "http 1.2.0",
+ "http 1.3.0",
  "maud",
  "once_cell",
  "openidconnect",
@@ -3187,7 +3187,7 @@ dependencies = [
  "chronoutil",
  "clap",
  "futures",
- "http 1.2.0",
+ "http 1.3.0",
  "maud",
  "once_cell",
  "reqwest 0.12.12",
@@ -3578,7 +3578,7 @@ dependencies = [
  "base64 0.22.1",
  "bytes",
  "h2 0.4.8",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "http-body-util",
  "hyper 1.6.0",
@@ -3644,7 +3644,7 @@ dependencies = [
  "axum-core 0.5.0",
  "cookie",
  "futures-util",
- "http 1.2.0",
+ "http 1.3.0",
  "parking_lot",
  "pin-project-lite",
  "tower-layer",
@@ -3661,7 +3661,7 @@ dependencies = [
  "bitflags 2.9.0",
  "bytes",
  "futures-core",
- "http 1.2.0",
+ "http 1.3.0",
  "http-body 1.0.1",
  "pin-project-lite",
  "tokio",
