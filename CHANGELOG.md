@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/philipcristiano/simplefin-rotki/compare/v0.1.1...v0.1.2) (2025-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate service_conventions to 0.0.28 ([#210](https://github.com/philipcristiano/simplefin-rotki/issues/210)) ([7720df9](https://github.com/philipcristiano/simplefin-rotki/commit/7720df9c5c879d0501252ad0640a7a3ec46f5c4b))
+* **deps:** update rust crate service_conventions to 0.0.29 ([#212](https://github.com/philipcristiano/simplefin-rotki/issues/212)) ([3e38d86](https://github.com/philipcristiano/simplefin-rotki/commit/3e38d86611fd0abfb35161cd304ddf5a88b1a125))
+
 ## [0.1.1](https://github.com/philipcristiano/simplefin-rotki/compare/v0.1.0...v0.1.1) (2025-04-03)
 
 
