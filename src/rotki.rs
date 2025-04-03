@@ -41,7 +41,7 @@ async fn request(client: &reqwest::Client, url: &String) -> anyhow::Result<reqwe
     Ok(client
         .get(url)
         .headers(tracing_headers)
-        .header("content-type", "application/json")
+        .header("user-agent", "simplefin-rotki")
         .send()
         .await?)
 }
