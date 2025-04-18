@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.2](https://github.com/philipcristiano/simplefin-rotki/compare/v0.1.1...v0.1.2) (2025-04-18)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate anyhow to v1.0.98 ([#219](https://github.com/philipcristiano/simplefin-rotki/issues/219)) ([4ea8b91](https://github.com/philipcristiano/simplefin-rotki/commit/4ea8b91a4ceab904b02b0a1083303000edb50eff))
+* **deps:** update rust crate clap to v4.5.36 ([#218](https://github.com/philipcristiano/simplefin-rotki/issues/218)) ([2bdd5a6](https://github.com/philipcristiano/simplefin-rotki/commit/2bdd5a67c8e3bade34a62a37867770e8eb42b63f))
+* **deps:** update rust crate clap to v4.5.37 ([#221](https://github.com/philipcristiano/simplefin-rotki/issues/221)) ([6fb8cb9](https://github.com/philipcristiano/simplefin-rotki/commit/6fb8cb9977738c1db055e521e39622b70b3ae928))
+* **deps:** update rust crate rust-embed to v8.7.0 ([#217](https://github.com/philipcristiano/simplefin-rotki/issues/217)) ([68ff350](https://github.com/philipcristiano/simplefin-rotki/commit/68ff350cb880fdd4c5220b0233bf527f6a04bc0b))
+* **deps:** update rust crate service_conventions to 0.0.28 ([#210](https://github.com/philipcristiano/simplefin-rotki/issues/210)) ([7720df9](https://github.com/philipcristiano/simplefin-rotki/commit/7720df9c5c879d0501252ad0640a7a3ec46f5c4b))
+* **deps:** update rust crate service_conventions to 0.0.29 ([#212](https://github.com/philipcristiano/simplefin-rotki/issues/212)) ([3e38d86](https://github.com/philipcristiano/simplefin-rotki/commit/3e38d86611fd0abfb35161cd304ddf5a88b1a125))
+* **deps:** update rust crate tokio to v1.44.2 ([#215](https://github.com/philipcristiano/simplefin-rotki/issues/215)) ([c54a04e](https://github.com/philipcristiano/simplefin-rotki/commit/c54a04ecf98e0a52a23589278c8eb313b0dd3035))
+
 ## [0.1.1](https://github.com/philipcristiano/simplefin-rotki/compare/v0.1.0...v0.1.1) (2025-04-03)
 
 
