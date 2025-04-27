@@ -13,7 +13,7 @@ use axum::{
     routing::{get, post},
     Form, Router,
 };
-use axum_extra::extract::Query;
+use axum_extra::extract::OptionalQuery;
 use std::net::SocketAddr;
 
 use maud::html;
@@ -87,7 +87,11 @@ struct RotkiUrl {
     rotki_url: String,
 }
 
-async fn get_root(config: State<AppConfig>, query_args: Option<Query<RotkiUrl>>) -> Response {
+#[axum::debug_handler]
+async fn get_root(
+    config: State<AppConfig>,
+    OptionalQuery(query_args): OptionalQuery<RotkiUrl>,
+) -> Response {
     let mut b64_sync_url: Option<String> = None;
     if let Some(r_url) = query_args {
         let rotki_url = r_url.rotki_url.clone();
