@@ -3080,7 +3080,7 @@ dependencies = [
  "serde_qs",
  "service_conventions",
  "signal-hook",
- "thiserror 1.0.69",
+ "thiserror 2.0.18",
  "tokio",
  "toml",
  "tower-http",
