@@ -24,6 +24,7 @@
         package = cargoNix.workspaceMembers.${package_name}.build.override {
           crateOverrides = pkgs.defaultCrateOverrides // {
             ${package_name} = attrs: {
+              nativeBuildInputs = (attrs.nativeBuildInputs or []) ++ [ pkgs.tailwindcss ];
               SQLX_OFFLINE = true;
             };
           };
@@ -35,6 +36,7 @@
             rust-bin.stable.latest.default
             rust-analyzer
             pkgs.crate2nix
+            pkgs.tailwindcss
           ];
           shellHook = ''
             export PGDATA=$PWD/pgdata
