@@ -31,6 +31,8 @@ pub struct BalanceResult {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct BalanceLocationValue {
     #[serde(with = "rust_decimal::serde::float")]
+    #[serde(alias = "value")]
+    #[serde(alias = "usd_value")]
     pub usd_value: rust_decimal::Decimal,
 }
 
