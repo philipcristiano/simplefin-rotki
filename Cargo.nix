@@ -561,189 +561,7 @@ rec {
         ];
 
       };
-      "axum 0.7.9" = rec {
-        crateName = "axum";
-        version = "0.7.9";
-        edition = "2021";
-        sha256 = "07z7wqczi9i8xb4460rvn39p4wjqwr32hx907crd1vwb2fy8ijpd";
-        dependencies = [
-          {
-            name = "async-trait";
-            packageId = "async-trait";
-          }
-          {
-            name = "axum-core";
-            packageId = "axum-core 0.4.5";
-          }
-          {
-            name = "axum-macros";
-            packageId = "axum-macros 0.4.2";
-            optional = true;
-          }
-          {
-            name = "bytes";
-            packageId = "bytes";
-          }
-          {
-            name = "futures-util";
-            packageId = "futures-util";
-            usesDefaultFeatures = false;
-            features = [ "alloc" ];
-          }
-          {
-            name = "http";
-            packageId = "http";
-          }
-          {
-            name = "http-body";
-            packageId = "http-body";
-          }
-          {
-            name = "http-body-util";
-            packageId = "http-body-util";
-          }
-          {
-            name = "hyper";
-            packageId = "hyper";
-            optional = true;
-          }
-          {
-            name = "hyper-util";
-            packageId = "hyper-util";
-            optional = true;
-            features = [ "tokio" "server" "service" ];
-          }
-          {
-            name = "itoa";
-            packageId = "itoa";
-          }
-          {
-            name = "matchit";
-            packageId = "matchit 0.7.3";
-          }
-          {
-            name = "memchr";
-            packageId = "memchr";
-          }
-          {
-            name = "mime";
-            packageId = "mime";
-          }
-          {
-            name = "percent-encoding";
-            packageId = "percent-encoding";
-          }
-          {
-            name = "pin-project-lite";
-            packageId = "pin-project-lite";
-          }
-          {
-            name = "rustversion";
-            packageId = "rustversion";
-          }
-          {
-            name = "serde";
-            packageId = "serde";
-          }
-          {
-            name = "serde_json";
-            packageId = "serde_json";
-            optional = true;
-            features = [ "raw_value" ];
-          }
-          {
-            name = "serde_path_to_error";
-            packageId = "serde_path_to_error";
-            optional = true;
-          }
-          {
-            name = "serde_urlencoded";
-            packageId = "serde_urlencoded";
-            optional = true;
-          }
-          {
-            name = "sync_wrapper";
-            packageId = "sync_wrapper";
-          }
-          {
-            name = "tokio";
-            packageId = "tokio";
-            rename = "tokio";
-            optional = true;
-            features = [ "time" ];
-          }
-          {
-            name = "tower";
-            packageId = "tower";
-            usesDefaultFeatures = false;
-            features = [ "util" ];
-          }
-          {
-            name = "tower-layer";
-            packageId = "tower-layer";
-          }
-          {
-            name = "tower-service";
-            packageId = "tower-service";
-          }
-          {
-            name = "tracing";
-            packageId = "tracing";
-            optional = true;
-            usesDefaultFeatures = false;
-          }
-        ];
-        devDependencies = [
-          {
-            name = "axum-macros";
-            packageId = "axum-macros 0.4.2";
-            features = [ "__private" ];
-          }
-          {
-            name = "serde";
-            packageId = "serde";
-            features = [ "derive" ];
-          }
-          {
-            name = "serde_json";
-            packageId = "serde_json";
-            features = [ "raw_value" ];
-          }
-          {
-            name = "tokio";
-            packageId = "tokio";
-            rename = "tokio";
-            features = [ "macros" "rt" "rt-multi-thread" "net" "test-util" ];
-          }
-          {
-            name = "tower";
-            packageId = "tower";
-            rename = "tower";
-            features = [ "util" "timeout" "limit" "load-shed" "steer" "filter" ];
-          }
-          {
-            name = "tracing";
-            packageId = "tracing";
-          }
-        ];
-        features = {
-          "__private_docs" = [ "axum-core/__private_docs" "tower/full" "dep:tower-http" ];
-          "default" = [ "form" "http1" "json" "matched-path" "original-uri" "query" "tokio" "tower-log" "tracing" ];
-          "form" = [ "dep:serde_urlencoded" ];
-          "http1" = [ "dep:hyper" "hyper?/http1" "hyper-util?/http1" ];
-          "http2" = [ "dep:hyper" "hyper?/http2" "hyper-util?/http2" ];
-          "json" = [ "dep:serde_json" "dep:serde_path_to_error" ];
-          "macros" = [ "dep:axum-macros" ];
-          "multipart" = [ "dep:multer" ];
-          "query" = [ "dep:serde_urlencoded" ];
-          "tokio" = [ "dep:hyper-util" "dep:tokio" "tokio/net" "tokio/rt" "tower/make" "tokio/macros" ];
-          "tower-log" = [ "tower/log" ];
-          "tracing" = [ "dep:tracing" "axum-core/tracing" ];
-          "ws" = [ "dep:hyper" "tokio" "dep:tokio-tungstenite" "dep:sha1" "dep:base64" ];
-        };
-        resolvedDefaultFeatures = [ "default" "form" "http1" "json" "macros" "matched-path" "original-uri" "query" "tokio" "tower-log" "tracing" ];
-      };
-      "axum 0.8.8" = rec {
+      "axum" = rec {
         crateName = "axum";
         version = "0.8.8";
         edition = "2021";
@@ -755,7 +573,7 @@ rec {
           }
           {
             name = "axum-macros";
-            packageId = "axum-macros 0.5.0";
+            packageId = "axum-macros";
             optional = true;
           }
           {
@@ -802,7 +620,7 @@ rec {
           }
           {
             name = "matchit";
-            packageId = "matchit 0.8.4";
+            packageId = "matchit";
           }
           {
             name = "memchr";
@@ -975,12 +793,6 @@ rec {
             name = "tower-service";
             packageId = "tower-service";
           }
-          {
-            name = "tracing";
-            packageId = "tracing";
-            optional = true;
-            usesDefaultFeatures = false;
-          }
         ];
         devDependencies = [
           {
@@ -994,7 +806,6 @@ rec {
           "__private_docs" = [ "dep:tower-http" ];
           "tracing" = [ "dep:tracing" ];
         };
-        resolvedDefaultFeatures = [ "tracing" ];
       };
       "axum-core 0.5.6" = rec {
         crateName = "axum-core";
@@ -1095,29 +906,33 @@ rec {
       };
       "axum-extra" = rec {
         crateName = "axum-extra";
-        version = "0.9.6";
+        version = "0.12.5";
         edition = "2021";
-        sha256 = "011gr9fkxild2yv7rxgn9shzlbcpyzvps3vlnwpiq2jgj06b7567";
+        sha256 = "0xlwripql5hck5l9nx7mhv5rl4mq0wryxwndpdbbmp96zznm5wpy";
         libName = "axum_extra";
         dependencies = [
           {
             name = "axum";
-            packageId = "axum 0.7.9";
+            packageId = "axum";
+            optional = true;
             usesDefaultFeatures = false;
-            features = [ "original-uri" ];
           }
           {
             name = "axum-core";
-            packageId = "axum-core 0.4.5";
+            packageId = "axum-core 0.5.6";
           }
           {
             name = "bytes";
             packageId = "bytes";
           }
           {
-            name = "fastrand";
-            packageId = "fastrand";
+            name = "form_urlencoded";
+            packageId = "form_urlencoded";
             optional = true;
+          }
+          {
+            name = "futures-core";
+            packageId = "futures-core";
           }
           {
             name = "futures-util";
@@ -1142,17 +957,13 @@ rec {
             packageId = "mime";
           }
           {
-            name = "multer";
-            packageId = "multer";
-            optional = true;
-          }
-          {
             name = "pin-project-lite";
             packageId = "pin-project-lite";
           }
           {
-            name = "serde";
-            packageId = "serde";
+            name = "serde_core";
+            packageId = "serde_core";
+            optional = true;
           }
           {
             name = "serde_html_form";
@@ -1160,10 +971,9 @@ rec {
             optional = true;
           }
           {
-            name = "tower";
-            packageId = "tower";
-            usesDefaultFeatures = false;
-            features = [ "util" ];
+            name = "serde_path_to_error";
+            packageId = "serde_path_to_error";
+            optional = true;
           }
           {
             name = "tower-layer";
@@ -1173,75 +983,44 @@ rec {
             name = "tower-service";
             packageId = "tower-service";
           }
-        ];
-        devDependencies = [
           {
-            name = "serde";
-            packageId = "serde";
-            features = [ "derive" ];
-          }
-          {
-            name = "tower";
-            packageId = "tower";
-            features = [ "util" ];
+            name = "tracing";
+            packageId = "tracing";
+            optional = true;
+            usesDefaultFeatures = false;
           }
         ];
         features = {
+          "__private_docs" = [ "axum/json" "dep:serde" "dep:tower" ];
           "async-read-body" = [ "dep:tokio-util" "tokio-util?/io" "dep:tokio" ];
           "attachment" = [ "dep:tracing" ];
+          "cached" = [ "dep:axum" ];
           "cookie" = [ "dep:cookie" ];
           "cookie-key-expansion" = [ "cookie" "cookie?/key-expansion" ];
           "cookie-private" = [ "cookie" "cookie?/private" ];
           "cookie-signed" = [ "cookie" "cookie?/signed" ];
-          "default" = [ "tracing" "multipart" ];
-          "erased-json" = [ "dep:serde_json" "dep:typed-json" ];
-          "form" = [ "dep:serde_html_form" ];
-          "json-deserializer" = [ "dep:serde_json" "dep:serde_path_to_error" ];
-          "json-lines" = [ "dep:serde_json" "dep:tokio-util" "dep:tokio-stream" "tokio-util?/io" "tokio-stream?/io-util" "dep:tokio" ];
+          "default" = [ "tracing" ];
+          "erased-json" = [ "dep:serde_core" "dep:serde_json" "dep:typed-json" ];
+          "error-response" = [ "dep:tracing" "tracing/std" ];
+          "file-stream" = [ "dep:tokio-util" "tokio-util?/io" "dep:tokio" "tokio?/fs" "tokio?/io-util" ];
+          "form" = [ "dep:axum" "dep:form_urlencoded" "dep:serde_core" "dep:serde_html_form" "dep:serde_path_to_error" ];
+          "handler" = [ "dep:axum" ];
+          "json-deserializer" = [ "dep:serde_core" "dep:serde_json" "dep:serde_path_to_error" ];
+          "json-lines" = [ "dep:serde_core" "dep:serde_json" "dep:tokio-util" "dep:tokio-stream" "tokio-util?/io" "tokio-stream?/io-util" "dep:tokio" ];
+          "middleware" = [ "dep:axum" ];
           "multipart" = [ "dep:multer" "dep:fastrand" ];
+          "optional-path" = [ "dep:axum" "dep:serde_core" ];
           "protobuf" = [ "dep:prost" ];
-          "query" = [ "dep:serde_html_form" ];
-          "tracing" = [ "axum-core/tracing" "axum/tracing" ];
+          "query" = [ "dep:form_urlencoded" "dep:serde_core" "dep:serde_html_form" "dep:serde_path_to_error" ];
+          "routing" = [ "axum/original-uri" "dep:rustversion" ];
+          "tracing" = [ "axum-core/tracing" "axum/tracing" "dep:tracing" ];
           "typed-header" = [ "dep:headers" ];
-          "typed-routing" = [ "dep:axum-macros" "dep:percent-encoding" "dep:serde_html_form" "dep:form_urlencoded" ];
+          "typed-routing" = [ "routing" "dep:axum-macros" "dep:percent-encoding" "dep:serde_core" "dep:serde_html_form" "dep:form_urlencoded" ];
+          "with-rejection" = [ "dep:axum" ];
         };
-        resolvedDefaultFeatures = [ "default" "multipart" "query" "tracing" ];
+        resolvedDefaultFeatures = [ "default" "query" "tracing" ];
       };
-      "axum-macros 0.4.2" = rec {
-        crateName = "axum-macros";
-        version = "0.4.2";
-        edition = "2021";
-        sha256 = "1klv77c889jm05bzayaaiinalarhvh2crc2w4nvp3l581xaj7lap";
-        procMacro = true;
-        libName = "axum_macros";
-        dependencies = [
-          {
-            name = "proc-macro2";
-            packageId = "proc-macro2";
-          }
-          {
-            name = "quote";
-            packageId = "quote";
-          }
-          {
-            name = "syn";
-            packageId = "syn 2.0.117";
-            features = [ "full" "parsing" "extra-traits" ];
-          }
-        ];
-        devDependencies = [
-          {
-            name = "syn";
-            packageId = "syn 2.0.117";
-            features = [ "full" "extra-traits" ];
-          }
-        ];
-        features = {
-          "__private" = [ "syn/visit-mut" ];
-        };
-        resolvedDefaultFeatures = [ "default" ];
-      };
-      "axum-macros 0.5.0" = rec {
+      "axum-macros" = rec {
         crateName = "axum-macros";
         version = "0.5.0";
         edition = "2021";
@@ -2898,29 +2677,6 @@ rec {
         };
         resolvedDefaultFeatures = [ "default" "serde" "serde_support" ];
       };
-      "encoding_rs" = rec {
-        crateName = "encoding_rs";
-        version = "0.8.35";
-        edition = "2018";
-        sha256 = "1wv64xdrr9v37rqqdjsyb8l8wzlcbab80ryxhrszvnj59wy0y0vm";
-        authors = [
-          "Henri Sivonen <hsivonen@hsivonen.fi>"
-        ];
-        dependencies = [
-          {
-            name = "cfg-if";
-            packageId = "cfg-if";
-          }
-        ];
-        features = {
-          "any_all_workaround" = [ "dep:any_all_workaround" ];
-          "default" = [ "alloc" ];
-          "fast-legacy-encode" = [ "fast-hangul-encode" "fast-hanja-encode" "fast-kanji-encode" "fast-gb-hanzi-encode" "fast-big5-hanzi-encode" ];
-          "serde" = [ "dep:serde" ];
-          "simd-accel" = [ "any_all_workaround" ];
-        };
-        resolvedDefaultFeatures = [ "alloc" "default" ];
-      };
       "equivalent" = rec {
         crateName = "equivalent";
         version = "1.0.2";
@@ -2982,22 +2738,6 @@ rec {
           "default" = [ "std" ];
         };
         resolvedDefaultFeatures = [ "default" "std" ];
-      };
-      "fastrand" = rec {
-        crateName = "fastrand";
-        version = "2.3.0";
-        edition = "2018";
-        sha256 = "1ghiahsw1jd68df895cy5h3gzwk30hndidn3b682zmshpgmrx41p";
-        authors = [
-          "Stjepan Glavina <stjepang@gmail.com>"
-        ];
-        features = {
-          "default" = [ "std" ];
-          "getrandom" = [ "dep:getrandom" ];
-          "js" = [ "std" "getrandom" ];
-          "std" = [ "alloc" ];
-        };
-        resolvedDefaultFeatures = [ "alloc" "default" "std" ];
       };
       "ff" = rec {
         crateName = "ff";
@@ -5321,19 +5061,7 @@ rec {
           "unicode" = [ "regex-automata/unicode" ];
         };
       };
-      "matchit 0.7.3" = rec {
-        crateName = "matchit";
-        version = "0.7.3";
-        edition = "2021";
-        sha256 = "156bgdmmlv4crib31qhgg49nsjk88dxkdqp80ha2pk2rk6n6ax0f";
-        authors = [
-          "Ibraheem Ahmed <ibraheem@ibraheem.ca>"
-        ];
-        features = {
-        };
-        resolvedDefaultFeatures = [ "default" ];
-      };
-      "matchit 0.8.4" = rec {
+      "matchit" = rec {
         crateName = "matchit";
         version = "0.8.4";
         edition = "2021";
@@ -5651,69 +5379,6 @@ rec {
           "os-ext" = [ "os-poll" "windows-sys/Win32_System_Pipes" "windows-sys/Win32_Security" ];
         };
         resolvedDefaultFeatures = [ "net" "os-ext" "os-poll" ];
-      };
-      "multer" = rec {
-        crateName = "multer";
-        version = "3.1.0";
-        edition = "2018";
-        sha256 = "0jr2snfay5fjz50yvdja4vbnddlj1iriiqjym88pbj3daiv7gs43";
-        authors = [
-          "Rousan Ali <hello@rousan.io>"
-        ];
-        dependencies = [
-          {
-            name = "bytes";
-            packageId = "bytes";
-          }
-          {
-            name = "encoding_rs";
-            packageId = "encoding_rs";
-          }
-          {
-            name = "futures-util";
-            packageId = "futures-util";
-            usesDefaultFeatures = false;
-          }
-          {
-            name = "http";
-            packageId = "http";
-          }
-          {
-            name = "httparse";
-            packageId = "httparse";
-          }
-          {
-            name = "memchr";
-            packageId = "memchr";
-          }
-          {
-            name = "mime";
-            packageId = "mime";
-          }
-          {
-            name = "spin";
-            packageId = "spin";
-            usesDefaultFeatures = false;
-            features = [ "spin_mutex" ];
-          }
-        ];
-        buildDependencies = [
-          {
-            name = "version_check";
-            packageId = "version_check";
-          }
-        ];
-        features = {
-          "all" = [ "json" ];
-          "json" = [ "serde" "serde_json" ];
-          "log" = [ "dep:log" ];
-          "serde" = [ "dep:serde" ];
-          "serde_json" = [ "dep:serde_json" ];
-          "tokio" = [ "dep:tokio" ];
-          "tokio-io" = [ "tokio" "tokio-util" ];
-          "tokio-util" = [ "dep:tokio-util" ];
-        };
-        resolvedDefaultFeatures = [ "default" ];
       };
       "nu-ansi-term" = rec {
         crateName = "nu-ansi-term";
@@ -8757,7 +8422,7 @@ rec {
         dependencies = [
           {
             name = "axum";
-            packageId = "axum 0.8.8";
+            packageId = "axum";
             optional = true;
             usesDefaultFeatures = false;
             features = [ "http1" "tokio" ];
@@ -10136,7 +9801,7 @@ rec {
           }
           {
             name = "axum";
-            packageId = "axum 0.8.8";
+            packageId = "axum";
             optional = true;
             features = [ "macros" ];
           }
@@ -10486,7 +10151,7 @@ rec {
           }
           {
             name = "axum";
-            packageId = "axum 0.7.9";
+            packageId = "axum";
             features = [ "macros" ];
           }
           {
@@ -10717,7 +10382,7 @@ rec {
           "ticket_mutex" = [ "mutex" ];
           "use_ticket_mutex" = [ "mutex" "ticket_mutex" ];
         };
-        resolvedDefaultFeatures = [ "mutex" "once" "spin_mutex" ];
+        resolvedDefaultFeatures = [ "once" ];
       };
       "spki" = rec {
         crateName = "spki";
@@ -11700,7 +11365,7 @@ rec {
           }
           {
             name = "axum";
-            packageId = "axum 0.8.8";
+            packageId = "axum";
             optional = true;
             usesDefaultFeatures = false;
           }
