@@ -5345,48 +5345,7 @@ rec {
         };
         resolvedDefaultFeatures = [ "default" ];
       };
-      "maud 0.26.0" = rec {
-        crateName = "maud";
-        version = "0.26.0";
-        edition = "2021";
-        sha256 = "1amw5r3w4v9z2grr2cf90aca9x1244gv18gzvp6qjhkb05sqnlfz";
-        authors = [
-          "Chris Wong <lambda.fairy@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "axum-core";
-            packageId = "axum-core 0.4.5";
-            optional = true;
-          }
-          {
-            name = "http";
-            packageId = "http";
-            optional = true;
-          }
-          {
-            name = "itoa";
-            packageId = "itoa";
-          }
-          {
-            name = "maud_macros";
-            packageId = "maud_macros 0.26.0";
-          }
-        ];
-        features = {
-          "actix-web" = [ "actix-web-dep" "futures-util" ];
-          "actix-web-dep" = [ "dep:actix-web-dep" ];
-          "axum" = [ "axum-core" "http" ];
-          "axum-core" = [ "dep:axum-core" ];
-          "futures-util" = [ "dep:futures-util" ];
-          "http" = [ "dep:http" ];
-          "rocket" = [ "dep:rocket" ];
-          "tide" = [ "dep:tide" ];
-          "warp" = [ "dep:warp" ];
-        };
-        resolvedDefaultFeatures = [ "axum" "axum-core" "default" "http" ];
-      };
-      "maud 0.27.0" = rec {
+      "maud" = rec {
         crateName = "maud";
         version = "0.27.0";
         edition = "2021";
@@ -5411,7 +5370,7 @@ rec {
           }
           {
             name = "maud_macros";
-            packageId = "maud_macros 0.27.0";
+            packageId = "maud_macros";
           }
         ];
         features = {
@@ -5429,37 +5388,7 @@ rec {
         };
         resolvedDefaultFeatures = [ "axum" "axum-core" "default" "http" ];
       };
-      "maud_macros 0.26.0" = rec {
-        crateName = "maud_macros";
-        version = "0.26.0";
-        edition = "2021";
-        sha256 = "062f4w3367x1la8j6wkvv5ga9hxmsdw5kz0idfps1391xhw34igs";
-        procMacro = true;
-        authors = [
-          "Chris Wong <lambda.fairy@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "proc-macro-error";
-            packageId = "proc-macro-error";
-            usesDefaultFeatures = false;
-          }
-          {
-            name = "proc-macro2";
-            packageId = "proc-macro2";
-          }
-          {
-            name = "quote";
-            packageId = "quote";
-          }
-          {
-            name = "syn";
-            packageId = "syn 2.0.117";
-          }
-        ];
-
-      };
-      "maud_macros 0.27.0" = rec {
+      "maud_macros" = rec {
         crateName = "maud_macros";
         version = "0.27.0";
         edition = "2021";
@@ -7225,69 +7154,6 @@ rec {
             packageId = "toml_edit";
             usesDefaultFeatures = false;
             features = [ "parse" ];
-          }
-        ];
-
-      };
-      "proc-macro-error" = rec {
-        crateName = "proc-macro-error";
-        version = "1.0.4";
-        edition = "2018";
-        sha256 = "1373bhxaf0pagd8zkyd03kkx6bchzf6g0dkwrwzsnal9z47lj9fs";
-        libName = "proc_macro_error";
-        authors = [
-          "CreepySkeleton <creepy-skeleton@yandex.ru>"
-        ];
-        dependencies = [
-          {
-            name = "proc-macro-error-attr";
-            packageId = "proc-macro-error-attr";
-          }
-          {
-            name = "proc-macro2";
-            packageId = "proc-macro2";
-          }
-          {
-            name = "quote";
-            packageId = "quote";
-          }
-        ];
-        buildDependencies = [
-          {
-            name = "version_check";
-            packageId = "version_check";
-          }
-        ];
-        features = {
-          "default" = [ "syn-error" ];
-          "syn" = [ "dep:syn" ];
-          "syn-error" = [ "syn" ];
-        };
-      };
-      "proc-macro-error-attr" = rec {
-        crateName = "proc-macro-error-attr";
-        version = "1.0.4";
-        edition = "2018";
-        sha256 = "0sgq6m5jfmasmwwy8x4mjygx5l7kp8s4j60bv25ckv2j1qc41gm1";
-        procMacro = true;
-        libName = "proc_macro_error_attr";
-        authors = [
-          "CreepySkeleton <creepy-skeleton@yandex.ru>"
-        ];
-        dependencies = [
-          {
-            name = "proc-macro2";
-            packageId = "proc-macro2";
-          }
-          {
-            name = "quote";
-            packageId = "quote";
-          }
-        ];
-        buildDependencies = [
-          {
-            name = "version_check";
-            packageId = "version_check";
           }
         ];
 
@@ -10162,7 +10028,7 @@ rec {
           }
           {
             name = "maud";
-            packageId = "maud 0.27.0";
+            packageId = "maud";
             optional = true;
             features = [ "axum" ];
           }
@@ -10525,7 +10391,7 @@ rec {
           }
           {
             name = "maud";
-            packageId = "maud 0.26.0";
+            packageId = "maud";
             features = [ "axum" ];
           }
           {
