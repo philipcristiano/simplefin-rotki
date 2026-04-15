@@ -10512,38 +10512,48 @@ rec {
       };
       "serde_qs" = rec {
         crateName = "serde_qs";
-        version = "0.15.0";
-        edition = "2018";
-        sha256 = "0ln32gdcsx8br54cqdbx7hb74wwmvslcag54a69s2cvmfagazypk";
+        version = "1.1.1";
+        edition = "2024";
+        sha256 = "0h0jrzw7lps8500f6l98zdmhlpp321ai0qjhghkq4crcb40nscf2";
         authors = [
           "Sam Scott <sam@osohq.com>"
         ];
         dependencies = [
           {
+            name = "itoa";
+            packageId = "itoa";
+          }
+          {
             name = "percent-encoding";
             packageId = "percent-encoding";
           }
           {
-            name = "serde";
-            packageId = "serde";
-            features = [ "derive" ];
+            name = "ryu";
+            packageId = "ryu";
           }
           {
-            name = "thiserror";
-            packageId = "thiserror 2.0.18";
+            name = "serde";
+            packageId = "serde";
+          }
+        ];
+        devDependencies = [
+          {
+            name = "serde";
+            packageId = "serde";
+            features = [ "rc" "derive" ];
           }
         ];
         features = {
           "actix-web3" = [ "dep:actix-web3" ];
           "actix-web4" = [ "dep:actix-web4" ];
-          "actix3" = [ "actix-web3" "futures" ];
-          "actix4" = [ "actix-web4" "futures" ];
-          "axum" = [ "axum-framework" "futures" ];
+          "actix3" = [ "actix-web3" "dep:futures-util" ];
+          "actix4" = [ "actix-web4" "dep:futures-util" ];
+          "axum" = [ "axum-framework" ];
           "axum-framework" = [ "dep:axum-framework" ];
-          "futures" = [ "dep:futures" ];
+          "benchmarks" = [ "dep:criterion" ];
           "indexmap" = [ "dep:indexmap" ];
           "tracing" = [ "dep:tracing" ];
-          "warp" = [ "futures" "tracing" "warp-framework" ];
+          "warp" = [ "tracing" "warp-framework" ];
           "warp-framework" = [ "dep:warp-framework" ];
         };
         resolvedDefaultFeatures = [ "default" ];
@@ -11248,7 +11258,7 @@ rec {
           }
           {
             name = "thiserror";
-            packageId = "thiserror 1.0.69";
+            packageId = "thiserror 2.0.18";
           }
           {
             name = "tokio";
