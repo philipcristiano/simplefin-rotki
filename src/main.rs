@@ -1,22 +1,18 @@
 use base64::prelude::*;
 use clap::Parser;
-use futures::try_join;
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 use std::fs;
-use std::ops::Deref;
 use std::str;
 
 use axum::{
-    extract::{FromRef, Path, State},
+    extract::{Path, State},
     http::StatusCode,
-    response::{IntoResponse, Redirect, Response},
-    routing::{get, post},
-    Form, Router,
+    response::{IntoResponse, Response},
+    routing::{get, post}, Router,
 };
-use axum_extra::extract::Query;
+use axum_extra::extract::OptionalQuery;
 use std::net::SocketAddr;
 
-use maud::html;
 
 mod html;
 mod rotki;
@@ -59,7 +55,7 @@ async fn main() {
 
     // Start by making a database connection.
 
-    let serve_assets = axum_embed::ServeEmbed::<StaticAssets>::new();
+    let _serve_assets = axum_embed::ServeEmbed::<StaticAssets>::new();
     let app = Router::new()
         // `GET /` goes to `root`
         .route("/", get(get_root))
@@ -87,9 +83,9 @@ struct RotkiUrl {
     rotki_url: String,
 }
 
-async fn get_root(config: State<AppConfig>, query_args: Option<Query<RotkiUrl>>) -> Response {
+async fn get_root(config: State<AppConfig>, query_args: OptionalQuery<RotkiUrl>) -> Response {
     let mut b64_sync_url: Option<String> = None;
-    if let Some(r_url) = query_args {
+    if let OptionalQuery(Some(r_url)) = query_args {
         let rotki_url = r_url.rotki_url.clone();
         let b64_rotki_url = BASE64_STANDARD.encode(rotki_url.as_bytes());
         let app_url = config.url.clone();
