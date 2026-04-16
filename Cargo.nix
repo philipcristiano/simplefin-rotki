@@ -13502,9 +13502,9 @@ rec {
       };
       "uuid" = rec {
         crateName = "uuid";
-        version = "1.23.0";
+        version = "1.23.1";
         edition = "2021";
-        sha256 = "1nbrzkdhwr4clshsks7flc2jq6lavjrsx65hyn63c9dd5vsbdj2s";
+        sha256 = "0xlwg23rmsfl3gx98qsyzpl24pf4bs9wi3mqx5c6i319hyb4mmyx";
         authors = [
           "Ashley Mannix<ashleymannix@live.com.au>"
           "Dylan DPC<dylan.dpc@gmail.com>"
@@ -13536,7 +13536,6 @@ rec {
             optional = true;
             usesDefaultFeatures = false;
             target = { target, features }: (("wasm32" == target."arch" or null) && (("unknown" == target."os" or null) || ("none" == target."os" or null)));
-            features = [ "msrv" ];
           }
         ];
         devDependencies = [
@@ -13748,7 +13747,7 @@ rec {
           "serde_json" = [ "dep:serde_json" ];
           "strict-macro" = [ "wasm-bindgen-macro/strict-macro" ];
         };
-        resolvedDefaultFeatures = [ "default" "msrv" "serde" "std" ];
+        resolvedDefaultFeatures = [ "default" "serde" "std" ];
       };
       "wasm-bindgen-futures" = rec {
         crateName = "wasm-bindgen-futures";
