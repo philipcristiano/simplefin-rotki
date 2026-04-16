@@ -1361,7 +1361,6 @@ dependencies = [
  "hyper",
  "hyper-util",
  "rustls",
- "rustls-native-certs",
  "tokio",
  "tokio-rustls",
  "tower-service",
@@ -2577,7 +2576,6 @@ dependencies = [
  "pin-project-lite",
  "quinn",
  "rustls",
- "rustls-native-certs",
  "rustls-pki-types",
  "serde",
  "serde_json",
@@ -3133,9 +3131,9 @@ dependencies = [
 
 [[package]]
 name = "service_conventions"
-version = "0.0.35"
+version = "0.0.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c341faa84faf234ff65f12852eab5a69491233bcac4cf7c164cacffece4e02a"
+checksum = "6a85198b6ecf4eeb33cf8c8a5f3a4ba36c069e9c5af9f6f00caf72c2240c4d96"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3651,7 +3649,6 @@ dependencies = [
  "hyper-util",
  "percent-encoding",
  "pin-project",
- "rustls-native-certs",
  "socket2",
  "sync_wrapper",
  "tokio",
