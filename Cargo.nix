@@ -1365,6 +1365,39 @@ rec {
         };
         resolvedDefaultFeatures = [ "default" "schema" ];
       };
+      "bs58" = rec {
+        crateName = "bs58";
+        version = "0.5.1";
+        edition = "2021";
+        sha256 = "1x3v51n5n2s3l0rgrsn142akdf331n2qsa75pscw71fi848vm25z";
+        dependencies = [
+          {
+            name = "tinyvec";
+            packageId = "tinyvec";
+            optional = true;
+            usesDefaultFeatures = false;
+            features = [ "grab_spare_slice" ];
+          }
+        ];
+        devDependencies = [
+          {
+            name = "tinyvec";
+            packageId = "tinyvec";
+            features = [ "rustc_1_55" ];
+          }
+        ];
+        features = {
+          "alloc" = [ "tinyvec?/alloc" ];
+          "cb58" = [ "sha2" ];
+          "check" = [ "sha2" ];
+          "default" = [ "std" ];
+          "sha2" = [ "dep:sha2" ];
+          "smallvec" = [ "dep:smallvec" ];
+          "std" = [ "alloc" "tinyvec?/std" ];
+          "tinyvec" = [ "dep:tinyvec" ];
+        };
+        resolvedDefaultFeatures = [ "alloc" "std" ];
+      };
       "bumpalo" = rec {
         crateName = "bumpalo";
         version = "3.20.2";
@@ -1473,9 +1506,9 @@ rec {
       };
       "cc" = rec {
         crateName = "cc";
-        version = "1.2.61";
+        version = "1.2.62";
         edition = "2018";
-        sha256 = "0vawvnrrsmi8dygavq3wx085cmlp10sp3fhld5842rlqkqsr0vfi";
+        sha256 = "164zsxcy2zzvbbh1qpbrsssz8kmria41j4agih47sal3y1cyip51";
         authors = [
           "Alex Crichton <alex@alexcrichton.com>"
         ];
@@ -3887,9 +3920,9 @@ rec {
       };
       "h2" = rec {
         crateName = "h2";
-        version = "0.4.13";
+        version = "0.4.14";
         edition = "2021";
-        sha256 = "0m6w5gg0n0m1m5915bxrv8n4rlazhx5icknkslz719jhh4xdli1g";
+        sha256 = "0cw7jk7kn2vn6f8w8ssh6gis1mljnfjxd606gvi4sjpyjayfy7qp";
         authors = [
           "Carl Lerche <me@carllerche.com>"
           "Sean McArthur <sean@seanmonstar.com>"
@@ -4017,14 +4050,11 @@ rec {
         };
         resolvedDefaultFeatures = [ "default-hasher" ];
       };
-      "hashbrown 0.17.0" = rec {
+      "hashbrown 0.17.1" = rec {
         crateName = "hashbrown";
-        version = "0.17.0";
+        version = "0.17.1";
         edition = "2024";
-        sha256 = "0l8gvcz80lvinb7x22h53cqbi2y1fm603y2jhhh9qwygvkb7sijg";
-        authors = [
-          "Amanieu d'Antras <amanieu@gmail.com>"
-        ];
+        sha256 = "0jmqz7i4yl6cm7rbn0i2ffkfrmwi6xkmzkaldr2v8bcsx2v0jngd";
         features = {
           "alloc" = [ "dep:alloc" ];
           "allocator-api2" = [ "dep:allocator-api2" ];
@@ -4244,9 +4274,9 @@ rec {
       };
       "hybrid-array" = rec {
         crateName = "hybrid-array";
-        version = "0.4.11";
+        version = "0.4.12";
         edition = "2024";
-        sha256 = "1i878m874s249357fx3rzj4fx8b4rlrxw19vpnazwlgdl0vnim08";
+        sha256 = "1njpm3mmsb6lgr9nn97ld5aavwjzrvijjb4nav0anhnimf1aamci";
         libName = "hybrid_array";
         authors = [
           "RustCrypto Developers"
@@ -5125,7 +5155,7 @@ rec {
           }
           {
             name = "hashbrown";
-            packageId = "hashbrown 0.17.0";
+            packageId = "hashbrown 0.17.1";
             usesDefaultFeatures = false;
           }
           {
@@ -5416,9 +5446,9 @@ rec {
       };
       "js-sys" = rec {
         crateName = "js-sys";
-        version = "0.3.97";
+        version = "0.3.98";
         edition = "2021";
-        sha256 = "1kyaxgn1sm5am98jb48aj5j7r7s98kdrab41la5wzys5q2a0r151";
+        sha256 = "024zjwpxp6fri4j79bh1686q1x4nw4a06fh1a28zv2rzc4973pv7";
         libName = "js_sys";
         authors = [
           "The wasm-bindgen Developers"
@@ -6117,7 +6147,7 @@ rec {
         dependencies = [
           {
             name = "base64";
-            packageId = "base64 0.21.7";
+            packageId = "base64 0.22.1";
           }
           {
             name = "chrono";
@@ -7020,9 +7050,9 @@ rec {
       };
       "pin-project" = rec {
         crateName = "pin-project";
-        version = "1.1.11";
+        version = "1.1.12";
         edition = "2021";
-        sha256 = "05zm3y3bl83ypsr6favxvny2kys4i19jiz1y18ylrbxwsiz9qx7i";
+        sha256 = "1sbcs3s240z2w4jaga53c3jl5maw4qprf0a9kfcagcq0h7kdkw6b";
         libName = "pin_project";
         dependencies = [
           {
@@ -7034,9 +7064,9 @@ rec {
       };
       "pin-project-internal" = rec {
         crateName = "pin-project-internal";
-        version = "1.1.11";
+        version = "1.1.12";
         edition = "2021";
-        sha256 = "1ik4mpb92da75inmjvxf2qm61vrnwml3x24wddvrjlqh1z9hxcnr";
+        sha256 = "12a3c85sa005ahk1qm673h1akx2fa8qfvpb0ybd5aj788cpy5459";
         procMacro = true;
         libName = "pin_project_internal";
         dependencies = [
@@ -10558,9 +10588,9 @@ rec {
       };
       "serde_with" = rec {
         crateName = "serde_with";
-        version = "3.19.0";
+        version = "3.20.0";
         edition = "2021";
-        sha256 = "06gbjdalx12grc9hx6s64ppqakn9v703ar98kfh193k1cz73jn7h";
+        sha256 = "1qnddis0nz2yg0dl06fnhf2q3hkim0vraq8ac3xzl8xjnwn1qb77";
         authors = [
           "Jonas Bushart"
           "Marcin Kaźmierczak"
@@ -10569,6 +10599,12 @@ rec {
           {
             name = "base64";
             packageId = "base64 0.22.1";
+            optional = true;
+            usesDefaultFeatures = false;
+          }
+          {
+            name = "bs58";
+            packageId = "bs58";
             optional = true;
             usesDefaultFeatures = false;
           }
@@ -10659,7 +10695,8 @@ rec {
           }
         ];
         features = {
-          "alloc" = [ "serde_core/alloc" "base64?/alloc" "chrono_0_4?/alloc" "hex?/alloc" "serde_json?/alloc" "time_0_3?/alloc" ];
+          "alloc" = [ "serde_core/alloc" "base64?/alloc" "bs58?/alloc" "chrono_0_4?/alloc" "hex?/alloc" "serde_json?/alloc" "time_0_3?/alloc" ];
+          "base58" = [ "dep:bs58" "alloc" ];
           "base64" = [ "dep:base64" "alloc" ];
           "chrono" = [ "chrono_0_4" ];
           "chrono_0_4" = [ "dep:chrono_0_4" ];
@@ -10675,20 +10712,20 @@ rec {
           "indexmap_2" = [ "dep:indexmap_2" "alloc" ];
           "json" = [ "dep:serde_json" "alloc" ];
           "macros" = [ "dep:serde_with_macros" ];
-          "schemars_0_8" = [ "dep:schemars_0_8" "std" "serde_with_macros?/schemars_0_8" ];
+          "schemars_0_8" = [ "dep:schemars_0_8" "std" "serde_with_macros?/schemars_0_8" "dep:serde_json" ];
           "schemars_0_9" = [ "dep:schemars_0_9" "alloc" "serde_with_macros?/schemars_0_9" "dep:serde_json" ];
           "schemars_1" = [ "dep:schemars_1" "alloc" "serde_with_macros?/schemars_1" "dep:serde_json" ];
           "smallvec_1" = [ "dep:smallvec_1" ];
-          "std" = [ "alloc" "serde_core/std" "chrono_0_4?/clock" "chrono_0_4?/std" "indexmap_1?/std" "indexmap_2?/std" "time_0_3?/serde-well-known" "time_0_3?/std" "schemars_0_9?/std" "schemars_1?/std" ];
+          "std" = [ "alloc" "bs58?/std" "serde_core/std" "chrono_0_4?/clock" "chrono_0_4?/std" "indexmap_1?/std" "indexmap_2?/std" "time_0_3?/serde-well-known" "time_0_3?/std" "schemars_0_9?/std" "schemars_1?/std" ];
           "time_0_3" = [ "dep:time_0_3" ];
         };
         resolvedDefaultFeatures = [ "alloc" "default" "macros" "std" ];
       };
       "serde_with_macros" = rec {
         crateName = "serde_with_macros";
-        version = "3.19.0";
+        version = "3.20.0";
         edition = "2021";
-        sha256 = "0d53aprng783yd9wpd5rjz7crynchdb8c7l8qddv9yalc3lbnbng";
+        sha256 = "1b5z2zs1flszvyfk2i5pky6qdigg82y467zlc81gpd7c723lh35r";
         procMacro = true;
         authors = [
           "Jonas Bushart"
@@ -11857,7 +11894,7 @@ rec {
           "std" = [ "alloc" ];
           "tinyvec_macros" = [ "dep:tinyvec_macros" ];
         };
-        resolvedDefaultFeatures = [ "alloc" "default" "tinyvec_macros" ];
+        resolvedDefaultFeatures = [ "alloc" "default" "grab_spare_slice" "std" "tinyvec_macros" ];
       };
       "tinyvec_macros" = rec {
         crateName = "tinyvec_macros";
@@ -12308,9 +12345,9 @@ rec {
       };
       "tonic" = rec {
         crateName = "tonic";
-        version = "0.14.5";
-        edition = "2021";
-        sha256 = "1v4k7aa28m7722gz9qak2jiy7lis1ycm4fdmq63iip4m0qdcdizy";
+        version = "0.14.6";
+        edition = "2024";
+        sha256 = "1vs5ci6z6b9xhfsnx4s8qx6bqi1zzcrxncjp71147a0gqwc5aamc";
         authors = [
           "Lucio Franco <luciofranco14@gmail.com>"
         ];
@@ -12461,9 +12498,9 @@ rec {
       };
       "tonic-prost" = rec {
         crateName = "tonic-prost";
-        version = "0.14.5";
-        edition = "2021";
-        sha256 = "02fkg2bv87q0yds2wz3w0s7i1x6qcgbrl00dy6ipajdapfh7clx5";
+        version = "0.14.6";
+        edition = "2024";
+        sha256 = "184y40nf0iyzc5rg32ivgd88snv68sqy1kchynn55r1vhml9z12h";
         libName = "tonic_prost";
         authors = [
           "Lucio Franco <luciofranco14@gmail.com>"
@@ -13623,9 +13660,9 @@ rec {
       };
       "wasm-bindgen" = rec {
         crateName = "wasm-bindgen";
-        version = "0.2.120";
+        version = "0.2.121";
         edition = "2021";
-        sha256 = "1cax9wy1n67sa2m16ia72lsxdrc5pzcv47psxp4p833yp3cvclnz";
+        sha256 = "14375vc40l67lk9rxp59my4r6s64h2an3vjfh9j0hnqngk8f3b29";
         libName = "wasm_bindgen";
         authors = [
           "The wasm-bindgen Developers"
@@ -13679,9 +13716,9 @@ rec {
       };
       "wasm-bindgen-futures" = rec {
         crateName = "wasm-bindgen-futures";
-        version = "0.4.70";
+        version = "0.4.71";
         edition = "2021";
-        sha256 = "1130a64yig0p10mk7rnq5l2jpwglbyxpnqg6h0nlqwzcmir4i4xg";
+        sha256 = "1f3k8r13nqshrlxwq0naxpbh250b4l6p526wlw2m78pv7w6jsjcn";
         libName = "wasm_bindgen_futures";
         authors = [
           "The wasm-bindgen Developers"
@@ -13707,9 +13744,9 @@ rec {
       };
       "wasm-bindgen-macro" = rec {
         crateName = "wasm-bindgen-macro";
-        version = "0.2.120";
+        version = "0.2.121";
         edition = "2021";
-        sha256 = "00xixpydzjd6y9knwdsrsiff6wi1ddszb1fa9bk25csz94gh9cbq";
+        sha256 = "0y45ghbkvs5rmxvdyhqrx8nzyy45rdx6619c01iaarykmzsfcs4f";
         procMacro = true;
         libName = "wasm_bindgen_macro";
         authors = [
@@ -13731,9 +13768,9 @@ rec {
       };
       "wasm-bindgen-macro-support" = rec {
         crateName = "wasm-bindgen-macro-support";
-        version = "0.2.120";
+        version = "0.2.121";
         edition = "2021";
-        sha256 = "0h8v5aphaaq155fzz2d312zrxbka1x6lsvb8mhc8m60n0kr0zkcx";
+        sha256 = "1wjr69qa8rwmk4v7243dr100k393qi0avznk6p5sgck4bk1rwnnr";
         libName = "wasm_bindgen_macro_support";
         authors = [
           "The wasm-bindgen Developers"
@@ -13767,10 +13804,10 @@ rec {
       };
       "wasm-bindgen-shared" = rec {
         crateName = "wasm-bindgen-shared";
-        version = "0.2.120";
+        version = "0.2.121";
         edition = "2021";
         links = "wasm_bindgen";
-        sha256 = "1sjrac4f4j5pgw42mxadq9v42f0bji1a2rcksrbnrwgbh8y7nxa9";
+        sha256 = "0h9la4176j5bvgbr64cqkmirif8z59vrcax9i4qx1w79045i1q64";
         libName = "wasm_bindgen_shared";
         authors = [
           "The wasm-bindgen Developers"
@@ -13895,9 +13932,9 @@ rec {
       };
       "web-sys" = rec {
         crateName = "web-sys";
-        version = "0.3.97";
+        version = "0.3.98";
         edition = "2021";
-        sha256 = "00knh8cizgb01bmh362f3f19b11f8zl1y3gj6h47pk95233vmb9f";
+        sha256 = "1aijiwx7wsfzj37p1gnqn6wv4j2ppf4rqwhrzb8blf6gigzjsmsb";
         libName = "web_sys";
         authors = [
           "The wasm-bindgen Developers"
@@ -13981,6 +14018,7 @@ rec {
           "CssStyleSheet" = [ "StyleSheet" ];
           "CssSupportsRule" = [ "CssConditionRule" "CssGroupingRule" "CssRule" ];
           "CssTransition" = [ "Animation" "EventTarget" ];
+          "CssViewTransitionRule" = [ "CssRule" ];
           "CustomEvent" = [ "Event" ];
           "DedicatedWorkerGlobalScope" = [ "EventTarget" "WorkerGlobalScope" ];
           "DelayNode" = [ "AudioNode" "EventTarget" ];
