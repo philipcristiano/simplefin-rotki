@@ -6149,7 +6149,7 @@ rec {
         dependencies = [
           {
             name = "base64";
-            packageId = "base64 0.22.1";
+            packageId = "base64 0.21.7";
           }
           {
             name = "chrono";
@@ -9417,9 +9417,9 @@ rec {
       };
       "rust_decimal" = rec {
         crateName = "rust_decimal";
-        version = "1.42.0";
+        version = "1.42.1";
         edition = "2021";
-        sha256 = "15b9s1ll34n7ji45wcjbykwk8svv6yjjpw97mhdf40yrskihhl8c";
+        sha256 = "0shj0aqxijard0822wnp88kk090lvydjkb66kkq8bg400zsj8amy";
         authors = [
           "Paul Mason <paul@form1.co.nz>"
         ];
