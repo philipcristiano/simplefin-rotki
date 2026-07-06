@@ -5356,16 +5356,16 @@ rec {
       };
       "jobserver" = rec {
         crateName = "jobserver";
-        version = "0.1.34";
+        version = "0.1.35";
         edition = "2021";
-        sha256 = "0cwx0fllqzdycqn4d6nb277qx5qwnmjdxdl0lxkkwssx77j3vyws";
+        sha256 = "1crwgbb0wjph42ni4hqryjxlv4vlr0hyk81g76id9fpa56ysq00w";
         authors = [
           "Alex Crichton <alex@alexcrichton.com>"
         ];
         dependencies = [
           {
             name = "getrandom";
-            packageId = "getrandom 0.3.4";
+            packageId = "getrandom 0.4.3";
             target = { target, features }: (target."windows" or false);
             features = [ "std" ];
           }
