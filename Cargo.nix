@@ -1730,10 +1730,10 @@ rec {
       };
       "clap" = rec {
         crateName = "clap";
-        version = "4.6.1";
+        version = "4.6.2";
         edition = "2024";
         crateBin = [];
-        sha256 = "0lcf88l7vlg796rrqr7wipbbmfa5sgsgx4211b7xmxxv8dz13nqx";
+        sha256 = "04ah42lfd7imr2mqj7xh0xgk3k5imb63hpgnhwvnphzmljfry1fx";
         dependencies = [
           {
             name = "clap_builder";
@@ -1772,9 +1772,9 @@ rec {
       };
       "clap_builder" = rec {
         crateName = "clap_builder";
-        version = "4.6.0";
+        version = "4.6.2";
         edition = "2024";
-        sha256 = "17q6np22yxhh5y5v53y4l31ps3hlaz45mvz2n2nicr7n3c056jki";
+        sha256 = "12sl6fyj6w2djxj0lsc1lkj1h3wpx74fjhb37izvaf65vjpji5ph";
         dependencies = [
           {
             name = "anstream";
@@ -3125,7 +3125,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_System_Diagnostics_Debug" ];
           }
@@ -7802,7 +7802,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_System_IO" "Win32_Networking_WinSock" ];
           }
@@ -9714,7 +9714,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             usesDefaultFeatures = false;
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_Security_Cryptography" ];
@@ -14393,7 +14393,7 @@ rec {
         dependencies = [
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_Storage_FileSystem" "Win32_System_Console" "Win32_System_SystemInformation" ];
           }
@@ -15070,7 +15070,7 @@ rec {
           "Win32_Web" = [ "Win32" ];
           "Win32_Web_InternetExplorer" = [ "Win32_Web" ];
         };
-        resolvedDefaultFeatures = [ "Win32" "Win32_Foundation" "Win32_System" "Win32_System_Threading" "default" ];
+        resolvedDefaultFeatures = [ "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_Diagnostics" "Win32_System_Diagnostics_Debug" "Win32_System_IO" "Win32_System_SystemInformation" "Win32_System_Threading" "default" ];
       };
       "windows-sys 0.61.2" = rec {
         crateName = "windows-sys";
@@ -15332,7 +15332,7 @@ rec {
           "Win32_Web" = [ "Win32" ];
           "Win32_Web_InternetExplorer" = [ "Win32_Web" ];
         };
-        resolvedDefaultFeatures = [ "Wdk" "Wdk_Foundation" "Wdk_Storage" "Wdk_Storage_FileSystem" "Wdk_System" "Wdk_System_IO" "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Authentication" "Win32_Security_Authentication_Identity" "Win32_Security_Credentials" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_Diagnostics" "Win32_System_Diagnostics_Debug" "Win32_System_IO" "Win32_System_LibraryLoader" "Win32_System_Memory" "Win32_System_Pipes" "Win32_System_SystemInformation" "Win32_System_SystemServices" "Win32_System_Threading" "Win32_System_WindowsProgramming" "default" ];
+        resolvedDefaultFeatures = [ "Wdk" "Wdk_Foundation" "Wdk_Storage" "Wdk_Storage_FileSystem" "Wdk_System" "Wdk_System_IO" "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Authentication" "Win32_Security_Authentication_Identity" "Win32_Security_Credentials" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_IO" "Win32_System_LibraryLoader" "Win32_System_Memory" "Win32_System_Pipes" "Win32_System_SystemInformation" "Win32_System_SystemServices" "Win32_System_Threading" "Win32_System_WindowsProgramming" "default" ];
       };
       "windows-targets 0.42.2" = rec {
         crateName = "windows-targets";
