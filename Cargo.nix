@@ -1189,6 +1189,20 @@ rec {
         };
         resolvedDefaultFeatures = [ "alloc" "default" "std" ];
       };
+      "base64 0.23.0" = rec {
+        crateName = "base64";
+        version = "0.23.0";
+        edition = "2021";
+        sha256 = "1a9x0g0gsi1iqh5c7mxdvnr340w8rn5bi4xjwp2q7p9w5kgmammj";
+        authors = [
+          "Marshall Pierce <marshall@mpierce.org>"
+        ];
+        features = {
+          "default" = [ "std" "simd-unsafe" ];
+          "std" = [ "alloc" ];
+        };
+        resolvedDefaultFeatures = [ "alloc" "default" "simd-unsafe" "std" ];
+      };
       "base64ct" = rec {
         crateName = "base64ct";
         version = "1.8.3";
@@ -11141,7 +11155,7 @@ rec {
           }
           {
             name = "base64";
-            packageId = "base64 0.22.1";
+            packageId = "base64 0.23.0";
           }
           {
             name = "chrono";
