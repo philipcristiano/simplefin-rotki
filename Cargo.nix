@@ -12185,9 +12185,9 @@ rec {
       };
       "toml" = rec {
         crateName = "toml";
-        version = "1.1.3+spec-1.1.0";
+        version = "1.1.4+spec-1.1.0";
         edition = "2024";
-        sha256 = "0g2c3lqf61ss14ak0lzg5r8fvsx8mnclzldfzk28y74lzb6nxjak";
+        sha256 = "1xanf3v10j8hdjz37mkhg80w92cw25kxwndhcp4w5pxw9czydb1s";
         dependencies = [
           {
             name = "indexmap";
@@ -12305,9 +12305,9 @@ rec {
       };
       "toml_parser" = rec {
         crateName = "toml_parser";
-        version = "1.1.2+spec-1.1.0";
+        version = "1.1.3+spec-1.1.0";
         edition = "2024";
-        sha256 = "09kmzc55a0j21whm290wlf5a8b18a0qc87a1s8sncrckc6wfkax2";
+        sha256 = "0mjdvihdkmjd4ykh574xgii71hpxw7ns7h4n4bisqpxrz4faqf0x";
         dependencies = [
           {
             name = "winnow";
