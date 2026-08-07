@@ -10470,9 +10470,9 @@ rec {
       };
       "serde_qs" = rec {
         crateName = "serde_qs";
-        version = "1.1.2";
+        version = "1.1.3";
         edition = "2024";
-        sha256 = "0cnkyrpq8i0gkkric1ki0c1nvn02vndja0l3h7jrkak8zz42bmb7";
+        sha256 = "1ldmx22gky03l15pcjg07q1a0zzvdndngy1v24s7v0kjw8896ns7";
         authors = [
           "Sam Scott <sam@osohq.com>"
         ];
