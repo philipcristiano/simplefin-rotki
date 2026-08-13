@@ -3230,9 +3230,9 @@ dependencies = [
 
 [[package]]
 name = "service_conventions"
-version = "0.0.40"
+version = "0.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6253c56d705fc70fd210d88e9baefd469e3b7e02e592b7284193fef361fd838"
+checksum = "0e593f1909f17b6a8a8d7390743a4ce20502936d9f7c109777cf8ca024fd824b"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3247,6 +3247,7 @@ dependencies = [
  "once_cell",
  "openidconnect",
  "opentelemetry",
+ "opentelemetry-http",
  "opentelemetry-otlp",
  "opentelemetry-semantic-conventions",
  "opentelemetry_sdk",
