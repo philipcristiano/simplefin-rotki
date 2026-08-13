@@ -6663,7 +6663,7 @@ rec {
           "reqwest-rustls" = [ "dep:reqwest" "reqwest/default-tls" ];
           "reqwest-rustls-webpki-roots" = [ "dep:reqwest" "reqwest/default-tls" "reqwest/webpki-roots" ];
         };
-        resolvedDefaultFeatures = [ "reqwest" "reqwest-blocking" "reqwest-rustls-webpki-roots" ];
+        resolvedDefaultFeatures = [ "default" "internal-logs" "reqwest" "reqwest-blocking" "reqwest-rustls-webpki-roots" ];
       };
       "opentelemetry-otlp" = rec {
         crateName = "opentelemetry-otlp";
@@ -11028,9 +11028,9 @@ rec {
       };
       "service_conventions" = rec {
         crateName = "service_conventions";
-        version = "0.0.40";
+        version = "0.0.41";
         edition = "2021";
-        sha256 = "0f6q3wvfygqrhir2nn9fw2vy6sflxyxfk20d47yp1z05sxb3q9g6";
+        sha256 = "0jw2zlja136gfybi0z4zdn9h41g29hx7943kin56lyzi14ckyn8f";
         dependencies = [
           {
             name = "anyhow";
@@ -11098,6 +11098,11 @@ rec {
           {
             name = "opentelemetry";
             packageId = "opentelemetry";
+            optional = true;
+          }
+          {
+            name = "opentelemetry-http";
+            packageId = "opentelemetry-http";
             optional = true;
           }
           {
@@ -11188,7 +11193,7 @@ rec {
           "jwt" = [ "dep:hmac" "dep:axum-core" "dep:jwt" "dep:sha2" ];
           "oidc" = [ "dep:anyhow" "dep:chrono" "dep:once_cell" "dep:openidconnect" "dep:serde" "dep:serde_json" "dep:maud" "dep:axum" "dep:tower-cookies" "dep:url" "dep:email_address" "dep:http" "dep:async-trait" "dep:axum-core" "dep:redacted" ];
           "tracing" = [ "dep:opentelemetry" "dep:opentelemetry-otlp" "dep:opentelemetry-semantic-conventions" "dep:tracing-subscriber" "dep:tracing" "dep:tracing-opentelemetry" "dep:opentelemetry_sdk" "dep:tonic" ];
-          "tracing-http" = [ "tracing" "dep:http" "dep:tower-http" ];
+          "tracing-http" = [ "tracing" "dep:http" "dep:tower-http" "dep:opentelemetry-http" ];
         };
         resolvedDefaultFeatures = [ "default" "jwt" "oidc" "tracing" "tracing-http" ];
       };
