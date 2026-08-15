@@ -11028,9 +11028,9 @@ rec {
       };
       "service_conventions" = rec {
         crateName = "service_conventions";
-        version = "0.0.41";
+        version = "0.0.42";
         edition = "2021";
-        sha256 = "0jw2zlja136gfybi0z4zdn9h41g29hx7943kin56lyzi14ckyn8f";
+        sha256 = "12v3zr7hb0ff6hrdi3j8g0m6ddzjz81ypdqc6p97fdhzfpvf8rsn";
         dependencies = [
           {
             name = "anyhow";
