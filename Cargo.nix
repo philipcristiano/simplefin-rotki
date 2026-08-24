@@ -530,7 +530,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             usesDefaultFeatures = false;
             features = [ "clone-impls" "full" "parsing" "printing" "proc-macro" "visit-mut" ];
           }
@@ -1856,7 +1856,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             features = [ "full" ];
           }
         ];
@@ -2839,7 +2839,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
           }
         ];
         features = {
@@ -3575,7 +3575,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             features = [ "full" ];
           }
         ];
@@ -8538,7 +8538,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
           }
         ];
 
@@ -10618,7 +10618,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             usesDefaultFeatures = false;
             features = [ "clone-impls" "derive" "parsing" "printing" "proc-macro" ];
           }
@@ -11813,11 +11813,11 @@ rec {
         };
         resolvedDefaultFeatures = [ "clone-impls" "default" "derive" "extra-traits" "fold" "full" "parsing" "printing" "proc-macro" "visit" "visit-mut" ];
       };
-      "syn 3.0.3" = rec {
+      "syn 3.0.4" = rec {
         crateName = "syn";
-        version = "3.0.3";
+        version = "3.0.4";
         edition = "2021";
-        sha256 = "18srnql3cd39j9q6hf1az02p67rlr1rf6njx9zx4vxj9i3jvmsak";
+        sha256 = "17v4ac61x0hvj1879ywqzlwhyzg7n9lr9zniwrsif3b1ykfmq9z6";
         authors = [
           "David Tolnay <dtolnay@gmail.com>"
         ];
@@ -11993,7 +11993,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
           }
         ];
 
@@ -12337,7 +12337,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             features = [ "full" ];
           }
         ];
@@ -16363,7 +16363,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.3";
+            packageId = "syn 3.0.4";
             features = [ "extra-traits" ];
           }
         ];
