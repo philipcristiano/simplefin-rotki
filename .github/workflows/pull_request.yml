@@ -11,7 +11,7 @@ jobs:
   check:
     runs-on: nixos-runner
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # main
 
       - name: Generate Cargo.nix
         run: crate2nix generate
@@ -26,14 +26,20 @@ jobs:
   flake:
     runs-on: nixos-runner
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # main
 
       - name: Setup Attic cache
-        uses: ryanccn/attic-action@v0
+        uses: ryanccn/attic-action@5635a15ef0c5462194ffbd05d1daeddc74625c3a # v0
         with:
           endpoint: ${{ secrets.ATTIC_ENDPOINT }}
           cache: ${{ secrets.ATTIC_CACHE }}
           token: ${{ secrets.ATTIC_TOKEN }}
+
+      - name: Set version
+        run: |
+          git fetch --tags --force
+          VERSION=$(git-cliff --config cliff.toml --bumped-version 2>/dev/null | sed 's/^v//')
+          echo "$VERSION" > VERSION
 
       - name: Build
         run: nix --experimental-features 'nix-command flakes' build -L --option log-lines 200
@@ -42,10 +48,6 @@ jobs:
         run: |
           # Pull tags
           git fetch --tags --force
-
-          # If git-cliff returns "vA.B.C" but VERSION file should be "A.B.C":
-          VERSION=$(git-cliff --config cliff.toml --bumped-version 2>/dev/null | sed 's/^v//')
-          echo "$VERSION" > VERSION
 
           nix --experimental-features 'nix-command flakes' build '#docker' -L --option log-lines 200
 
