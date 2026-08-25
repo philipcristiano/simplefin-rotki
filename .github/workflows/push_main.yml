@@ -10,24 +10,21 @@ jobs:
   flake:
     runs-on: nixos-runner
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # main
         with:
           fetch-depth: 0      # needed so git-cliff can see full history
           fetch-tags: true    # ensure all tags are present
 
       - name: Setup Attic cache
-        uses: ryanccn/attic-action@v0
+        uses: ryanccn/attic-action@5635a15ef0c5462194ffbd05d1daeddc74625c3a # v0
         with:
           endpoint: ${{ secrets.ATTIC_ENDPOINT }}
           cache: ${{ secrets.ATTIC_CACHE }}
           token: ${{ secrets.ATTIC_TOKEN }}
 
-      - name: Update version
+      - name: Set version
         run: |
-          # Pull tags
           git fetch --tags --force
-
-          # If git-cliff returns "vA.B.C" but VERSION file should be "A.B.C":
           VERSION=$(git-cliff --config cliff.toml --bumped-version 2>/dev/null | sed 's/^v//')
           echo "$VERSION" > VERSION
 
