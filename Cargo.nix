@@ -13453,9 +13453,9 @@ rec {
       };
       "uuid" = rec {
         crateName = "uuid";
-        version = "1.26.0";
+        version = "1.26.1";
         edition = "2021";
-        sha256 = "04kqmzwdqbh1lgci3dhv4ir1nk12bff98z8iq9m8m2myr5qjsxxm";
+        sha256 = "1kl5nb7r3gpmkc43d6nbayvzqhcp2grczk6c7bxv80b6x70xmxif";
         authors = [
           "Ashley Mannix<ashleymannix@live.com.au>"
           "Dylan DPC<dylan.dpc@gmail.com>"
