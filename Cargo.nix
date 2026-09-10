@@ -12081,9 +12081,9 @@ rec {
       };
       "toml" = rec {
         crateName = "toml";
-        version = "1.1.5+spec-1.1.0";
+        version = "1.1.6+spec-1.1.0";
         edition = "2024";
-        sha256 = "1187cjssdx1rdhb802w6ch6xmsj7804n46iripllqjq4h2bbmh0j";
+        sha256 = "0sj0g89pyrkm9g5zaaqsdlclr98xf1chvi8jv9qsn4897xa041lj";
         dependencies = [
           {
             name = "indexmap";
