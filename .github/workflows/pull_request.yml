@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # main
 
       - name: Setup Attic cache
-        uses: ryanccn/attic-action@5635a15ef0c5462194ffbd05d1daeddc74625c3a # v0
+        uses: ryanccn/attic-action@3ea5d933b47d8f9a3f008af7724f4b8b4f97f3ad # v0
         with:
           endpoint: ${{ secrets.ATTIC_ENDPOINT }}
           cache: ${{ secrets.ATTIC_CACHE }}
