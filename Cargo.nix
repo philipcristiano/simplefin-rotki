@@ -415,9 +415,9 @@ rec {
       };
       "async-compression" = rec {
         crateName = "async-compression";
-        version = "0.4.48";
+        version = "0.4.50";
         edition = "2018";
-        sha256 = "1z8p6jw23dn9f2zpabjf6j1c2chbwzq898ahqgkkxxyylyhswqgv";
+        sha256 = "18gmagyzh9584n0j0smnq2kcx0a819141s6lpan92diynjcvs6gf";
         libName = "async_compression";
         authors = [
           "Wim Looman <wim@nemo157.com>"
@@ -456,6 +456,7 @@ rec {
           "all-algorithms" = [ "brotli" "bzip2" "deflate" "deflate64" "gzip" "lz4" "lzma" "xz" "xz-parallel" "zlib" "zstd" ];
           "all-implementations" = [ "futures-io" "tokio" ];
           "brotli" = [ "compression-codecs/brotli" ];
+          "brotli-mbrotli" = [ "compression-codecs/brotli-mbrotli" ];
           "bzip2" = [ "compression-codecs/bzip2" ];
           "deflate" = [ "compression-codecs/deflate" ];
           "deflate64" = [ "compression-codecs/deflate64" ];
@@ -1412,9 +1413,9 @@ rec {
       };
       "cc" = rec {
         crateName = "cc";
-        version = "1.5.1";
+        version = "1.6.0";
         edition = "2021";
-        sha256 = "0h70pg4050i16fp5v62wqxj0h8ajzvagrwz7bvdj33pfji8i8q7k";
+        sha256 = "0c3n82hdi355xa6z9x4zgnpjwsh1szkkcs0zl8q8nl5ggk874j7p";
         dependencies = [
           {
             name = "find-msvc-tools";
@@ -1826,9 +1827,9 @@ rec {
       };
       "compression-codecs" = rec {
         crateName = "compression-codecs";
-        version = "0.4.43";
+        version = "0.4.45";
         edition = "2018";
-        sha256 = "1sannrv05k5hq2541rqzh51nffhzj4wpvhwwj1mam5r7p93nrwdy";
+        sha256 = "0jk12ybh2wl2lg14g4x4qkl0npf4vyw34djx0wbm7bd01d39iz4q";
         libName = "compression_codecs";
         authors = [
           "Wim Looman <wim@nemo157.com>"
@@ -1853,6 +1854,7 @@ rec {
         features = {
           "all-algorithms" = [ "brotli" "bzip2" "deflate" "gzip" "lz4" "lzma" "xz-parallel" "xz" "zlib" "zstd" "deflate64" ];
           "brotli" = [ "dep:brotli" ];
+          "brotli-mbrotli" = [ "dep:mbrotli" ];
           "bzip2" = [ "dep:bzip2" ];
           "deflate" = [ "flate2" ];
           "deflate64" = [ "dep:deflate64" ];
@@ -5602,9 +5604,9 @@ rec {
       };
       "lazy_static" = rec {
         crateName = "lazy_static";
-        version = "1.5.0";
+        version = "1.5.1";
         edition = "2015";
-        sha256 = "1zk6dqqni0193xg6iijh7i3i44sryglwgvx20spdvwk3r6sbrlmv";
+        sha256 = "1yqaqmp510xw2ldpw88mx9b5s5qj8flb4rw0wd9ks1zpk9j0z1r0";
         authors = [
           "Marvin Löbel <loebel.marvin@gmail.com>"
         ];
@@ -5625,9 +5627,9 @@ rec {
       };
       "libc" = rec {
         crateName = "libc";
-        version = "0.2.189";
+        version = "0.2.190";
         edition = "2021";
-        sha256 = "1whjfs375vlng2q6yrbzs73cvp5lm3w1n2gfqajb2vgf7zg3xbry";
+        sha256 = "0y5yap4bfp7rfsldcbk9pb5alcgygca5xn1n2pmh181zdpf3spff";
         features = {
           "default" = [ "std" ];
           "rustc-dep-of-std" = [ "align" "rustc-std-workspace-core" ];
@@ -5962,9 +5964,9 @@ rec {
       };
       "mio" = rec {
         crateName = "mio";
-        version = "1.2.3";
+        version = "1.2.4";
         edition = "2021";
-        sha256 = "1n5ryp7j5fga38z7php5yy9k7ia24rp6cl9gm27zwar6khz4862b";
+        sha256 = "1vl6px9zy0pwhlwnw3cknsqyzkg8bcpiwiq4cgicf2fwgywfv20p";
         authors = [
           "Carl Lerche <me@carllerche.com>"
           "Thomas de Zeeuw <thomasdezeeuw@gmail.com>"
@@ -7794,9 +7796,9 @@ rec {
       };
       "quinn-proto" = rec {
         crateName = "quinn-proto";
-        version = "0.11.18";
+        version = "0.11.19";
         edition = "2021";
-        sha256 = "1z6931x1gn4mkhrbbbww3syb4c8awc229bqz5x7lyqvnw6ynsx59";
+        sha256 = "1gpg5d36v8wrm1hjrrz8jfcyflcnv8lva2sxl4wh8kzyap50qx8f";
         libName = "quinn_proto";
         dependencies = [
           {
@@ -7901,9 +7903,9 @@ rec {
       };
       "quinn-udp" = rec {
         crateName = "quinn-udp";
-        version = "0.5.15";
+        version = "0.5.16";
         edition = "2021";
-        sha256 = "15063ji7443y4z8i4pdxlid2vn0kkxjc51d6c6dfiaysavwk789m";
+        sha256 = "05phk0ragk1655pxkbfvjxxb5i5b1i4nbjjnvgsdqfc6y5yr0rmg";
         libName = "quinn_udp";
         dependencies = [
           {
@@ -11929,9 +11931,9 @@ rec {
       };
       "tokio-rustls" = rec {
         crateName = "tokio-rustls";
-        version = "0.26.5";
+        version = "0.26.6";
         edition = "2021";
-        sha256 = "0rqzway3m45lj9bdhd5mbl75z6dagaqz90k6ndccvcgh7qn5zj5h";
+        sha256 = "1nq5s413p6hkwrgjrpag1gi2mnjajpbszqhmhbpnkmfdq9w2dk69";
         libName = "tokio_rustls";
         dependencies = [
           {
@@ -15657,9 +15659,9 @@ rec {
       };
       "yoke-derive" = rec {
         crateName = "yoke-derive";
-        version = "0.8.3";
+        version = "0.8.4";
         edition = "2021";
-        sha256 = "0y1a857vmqk2zpq4jj4sxxm7mla18xsrapjldpmvq3g4pql1909k";
+        sha256 = "0wbdvvdv9birwxrr9ynxj0k7as0f0ci7ihhck34yi09nvgibv3pc";
         procMacro = true;
         libName = "yoke_derive";
         authors = [
