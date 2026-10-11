@@ -10326,9 +10326,9 @@ rec {
       };
       "serde_json" = rec {
         crateName = "serde_json";
-        version = "1.0.152";
+        version = "1.0.153";
         edition = "2021";
-        sha256 = "1ih38ybj6gzjq783m9ygwgcpghkm03b3wmjxkfl06jn5dixanh8p";
+        sha256 = "0xi1alrj977jw917pdndgdkx7g4bwa4x6f7rnbvyq5i44ffhfqma";
         dependencies = [
           {
             name = "itoa";
