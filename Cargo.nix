@@ -12076,9 +12076,9 @@ rec {
       };
       "toml" = rec {
         crateName = "toml";
-        version = "1.1.8+spec-1.1.0";
+        version = "1.2.0+spec-1.1.0";
         edition = "2024";
-        sha256 = "13b7kqvw7aa4x08i03d2fpima1i75v0lqxl0wrmisx6qwh09wj10";
+        sha256 = "0qg503lsxqgbpn28bspgglmz8m08iqdzxhbmsszxndh4ypwcvzy5";
         dependencies = [
           {
             name = "indexmap";
@@ -12216,9 +12216,9 @@ rec {
       };
       "toml_writer" = rec {
         crateName = "toml_writer";
-        version = "1.1.3+spec-1.1.0";
+        version = "1.2.0+spec-1.1.0";
         edition = "2024";
-        sha256 = "0w17cps8mfg7wcwyp0gggi9cpgmxldb9pwl55qp8ssq5zj6bvg86";
+        sha256 = "0fp14qh313y31pqddn2bhk01l7ygx70f9fxfhgpma77i01vvp780";
         features = {
           "default" = [ "std" ];
           "std" = [ "alloc" ];
