@@ -13448,14 +13448,9 @@ rec {
       };
       "uuid" = rec {
         crateName = "uuid";
-        version = "1.29.0";
+        version = "1.29.1";
         edition = "2021";
-        sha256 = "0525458ww4jwa0nw513jdrhgwxrldglzvfrbw5gnjl0cc88js3ja";
-        authors = [
-          "Ashley Mannix<ashleymannix@live.com.au>"
-          "Dylan DPC<dylan.dpc@gmail.com>"
-          "Hunar Roop Kahlon<hunar.roop@gmail.com>"
-        ];
+        sha256 = "1p3b7vh4jvpj5q64q1qrvlrd15c5h1wkwzdgpg3rn03bhn5g01ja";
         dependencies = [
           {
             name = "getrandom";
