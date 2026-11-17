@@ -496,7 +496,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             usesDefaultFeatures = false;
             features = [ "clone-impls" "full" "parsing" "printing" "proc-macro" "visit-mut" ];
           }
@@ -1320,14 +1320,14 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" "fold" ];
           }
         ];
         devDependencies = [
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" "fold" "parsing" ];
           }
         ];
@@ -1628,10 +1628,10 @@ rec {
       };
       "clap" = rec {
         crateName = "clap";
-        version = "4.6.7";
+        version = "4.6.8";
         edition = "2024";
         crateBin = [];
-        sha256 = "0il98y2rfw75984ck59znd4n592p07bxz8yy3a9blddb02rpd25a";
+        sha256 = "0jnd0ilrh7yx5vlxjrnzanfm0lgad6p852wrsvc6j0kxb1w088xc";
         dependencies = [
           {
             name = "clap_builder";
@@ -1709,9 +1709,9 @@ rec {
       };
       "clap_derive" = rec {
         crateName = "clap_derive";
-        version = "4.6.7";
+        version = "4.6.8";
         edition = "2024";
-        sha256 = "1q36bgbkfb9rdz7jcvd0ffv0wwlyw0lg3z6iwdcybm0mjjvm3izr";
+        sha256 = "0yknfahwc1bkz618rhzqpkgadaiawwa4lwpk5658ppf25a6rsp49";
         procMacro = true;
         dependencies = [
           {
@@ -1728,7 +1728,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" ];
           }
         ];
@@ -2425,7 +2425,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" "extra-traits" ];
           }
         ];
@@ -2456,7 +2456,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
           }
         ];
 
@@ -2510,7 +2510,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" "extra-traits" ];
           }
         ];
@@ -2713,7 +2713,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
           }
         ];
         features = {
@@ -3099,7 +3099,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_System_Diagnostics_Debug" ];
           }
@@ -3437,7 +3437,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" ];
           }
         ];
@@ -7933,7 +7933,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_System_IO" "Win32_Networking_WinSock" ];
           }
@@ -8350,7 +8350,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
           }
         ];
 
@@ -9700,7 +9700,7 @@ rec {
           }
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             usesDefaultFeatures = false;
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_Security_Cryptography" ];
@@ -10283,7 +10283,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             usesDefaultFeatures = false;
             features = [ "clone-impls" "derive" "parsing" "printing" "proc-macro" ];
           }
@@ -10687,7 +10687,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "extra-traits" "full" "parsing" ];
           }
         ];
@@ -11427,11 +11427,11 @@ rec {
         };
         resolvedDefaultFeatures = [ "clone-impls" "default" "derive" "extra-traits" "full" "parsing" "printing" "proc-macro" "visit-mut" ];
       };
-      "syn 3.0.9" = rec {
+      "syn 3.0.10" = rec {
         crateName = "syn";
-        version = "3.0.9";
+        version = "3.0.10";
         edition = "2021";
-        sha256 = "0fw28lhl90kls24q2h2sp39yjb0lsvz5cwh9fd3f3w3v9kp8v36p";
+        sha256 = "0ygaz8ccgap0vb0faifk1xv1p2sayg490r038fab1c57lfzcrsaa";
         authors = [
           "David Tolnay <dtolnay@gmail.com>"
         ];
@@ -11503,7 +11503,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             usesDefaultFeatures = false;
             features = [ "derive" "parsing" "printing" "clone-impls" "visit" "extra-traits" ];
           }
@@ -11596,7 +11596,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
           }
         ];
 
@@ -11921,7 +11921,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "full" ];
           }
         ];
@@ -13742,7 +13742,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "visit" "visit-mut" "full" "extra-traits" ];
           }
           {
@@ -14340,7 +14340,7 @@ rec {
         dependencies = [
           {
             name = "windows-sys";
-            packageId = "windows-sys 0.61.2";
+            packageId = "windows-sys 0.52.0";
             target = { target, features }: (target."windows" or false);
             features = [ "Win32_Foundation" "Win32_Storage_FileSystem" "Win32_System_Console" "Win32_System_SystemInformation" ];
           }
@@ -15017,7 +15017,7 @@ rec {
           "Win32_Web" = [ "Win32" ];
           "Win32_Web_InternetExplorer" = [ "Win32_Web" ];
         };
-        resolvedDefaultFeatures = [ "Win32" "Win32_Foundation" "Win32_System" "Win32_System_Threading" "default" ];
+        resolvedDefaultFeatures = [ "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_Diagnostics" "Win32_System_Diagnostics_Debug" "Win32_System_IO" "Win32_System_SystemInformation" "Win32_System_Threading" "default" ];
       };
       "windows-sys 0.61.2" = rec {
         crateName = "windows-sys";
@@ -15279,7 +15279,7 @@ rec {
           "Win32_Web" = [ "Win32" ];
           "Win32_Web_InternetExplorer" = [ "Win32_Web" ];
         };
-        resolvedDefaultFeatures = [ "Wdk" "Wdk_Foundation" "Wdk_Storage" "Wdk_Storage_FileSystem" "Wdk_System" "Wdk_System_IO" "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Authentication" "Win32_Security_Authentication_Identity" "Win32_Security_Credentials" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_Diagnostics" "Win32_System_Diagnostics_Debug" "Win32_System_IO" "Win32_System_LibraryLoader" "Win32_System_Memory" "Win32_System_Pipes" "Win32_System_SystemInformation" "Win32_System_SystemServices" "Win32_System_Threading" "Win32_System_WindowsProgramming" "default" ];
+        resolvedDefaultFeatures = [ "Wdk" "Wdk_Foundation" "Wdk_Storage" "Wdk_Storage_FileSystem" "Wdk_System" "Wdk_System_IO" "Win32" "Win32_Foundation" "Win32_Networking" "Win32_Networking_WinSock" "Win32_Security" "Win32_Security_Authentication" "Win32_Security_Authentication_Identity" "Win32_Security_Credentials" "Win32_Security_Cryptography" "Win32_Storage" "Win32_Storage_FileSystem" "Win32_System" "Win32_System_Console" "Win32_System_IO" "Win32_System_LibraryLoader" "Win32_System_Memory" "Win32_System_Pipes" "Win32_System_SystemInformation" "Win32_System_SystemServices" "Win32_System_Threading" "Win32_System_WindowsProgramming" "default" ];
       };
       "windows-targets 0.42.2" = rec {
         crateName = "windows-targets";
@@ -15671,7 +15671,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "fold" "visit" ];
           }
           {
@@ -15787,7 +15787,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "fold" "visit" ];
           }
           {
@@ -15921,7 +15921,7 @@ rec {
           }
           {
             name = "syn";
-            packageId = "syn 3.0.9";
+            packageId = "syn 3.0.10";
             features = [ "extra-traits" ];
           }
         ];
