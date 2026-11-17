@@ -10473,9 +10473,9 @@ rec {
       };
       "serde_spanned" = rec {
         crateName = "serde_spanned";
-        version = "1.1.2";
+        version = "1.1.3";
         edition = "2024";
-        sha256 = "0b0crd16vvp0n81pgh0ldi3apld0ph5ywsrml80y5v2ynnz26xaf";
+        sha256 = "10mpm2i41lx4jnp530fjk942myplsibbm302mx8cawcl6q57w64w";
         dependencies = [
           {
             name = "serde_core";
@@ -12076,9 +12076,9 @@ rec {
       };
       "toml" = rec {
         crateName = "toml";
-        version = "1.2.0+spec-1.1.0";
+        version = "1.2.1+spec-1.1.0";
         edition = "2024";
-        sha256 = "0qg503lsxqgbpn28bspgglmz8m08iqdzxhbmsszxndh4ypwcvzy5";
+        sha256 = "1mrcyghs23p7g74w9lzpal3hd3jqp67ayswmy48wgniwhr8mqxfm";
         dependencies = [
           {
             name = "indexmap";
@@ -12140,9 +12140,9 @@ rec {
       };
       "toml_datetime" = rec {
         crateName = "toml_datetime";
-        version = "1.1.2+spec-1.1.0";
+        version = "1.1.3+spec-1.1.0";
         edition = "2024";
-        sha256 = "0lrhcmqvhjr259w4f2kijya7fgi0kpmhg9fb3m144v3cj1kxg1ib";
+        sha256 = "0jbfdgsl0vw6f394cifqm62d8q0aiiima891v2i7c8fdhg42agqp";
         dependencies = [
           {
             name = "serde_core";
