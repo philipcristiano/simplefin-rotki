@@ -6443,9 +6443,9 @@ rec {
       };
       "opentelemetry" = rec {
         crateName = "opentelemetry";
-        version = "0.32.0";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "10ln14d1jgc8rvw97mblc9blzcgpg1bimim4d170b7ia4mijq55h";
+        sha256 = "1vnrd8d4khv82xqb80yy4sixmx78c5dhhz2c3saa8xf8r5m1l7wc";
         dependencies = [
           {
             name = "futures-core";
@@ -6497,9 +6497,9 @@ rec {
       };
       "opentelemetry-http" = rec {
         crateName = "opentelemetry-http";
-        version = "0.32.0";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "0ca3drvm4fx5nskl7yn42dimy3bg35ppzc85y1p27pz215fh30sn";
+        sha256 = "04g8nzsqm0p38k37jh3icjw1rilvyz5v5dd7magph178isylj8ih";
         libName = "opentelemetry_http";
         dependencies = [
           {
@@ -6535,16 +6535,15 @@ rec {
           "internal-logs" = [ "opentelemetry/internal-logs" ];
           "reqwest" = [ "dep:reqwest" ];
           "reqwest-blocking" = [ "dep:reqwest" "reqwest/blocking" ];
-          "reqwest-rustls" = [ "dep:reqwest" "reqwest/default-tls" ];
-          "reqwest-rustls-webpki-roots" = [ "dep:reqwest" "reqwest/default-tls" "reqwest/webpki-roots" ];
+          "reqwest-rustls" = [ "dep:reqwest" "reqwest/rustls" ];
         };
-        resolvedDefaultFeatures = [ "default" "internal-logs" "reqwest" "reqwest-blocking" "reqwest-rustls-webpki-roots" ];
+        resolvedDefaultFeatures = [ "default" "internal-logs" "reqwest" "reqwest-blocking" "reqwest-rustls" ];
       };
       "opentelemetry-otlp" = rec {
         crateName = "opentelemetry-otlp";
-        version = "0.32.0";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "0d9cys2flpidfxbr6h1103hjc633cax47ihnqgbj0xnicscr4rlr";
+        sha256 = "06ifiklf5x6qj12r2ivx372vbf1pk6ck3j1ixwl72dhyhhjaymh7";
         libName = "opentelemetry_otlp";
         dependencies = [
           {
@@ -6553,6 +6552,11 @@ rec {
             optional = true;
             usesDefaultFeatures = false;
             features = [ "std" ];
+          }
+          {
+            name = "httpdate";
+            packageId = "httpdate";
+            optional = true;
           }
           {
             name = "opentelemetry";
@@ -6596,7 +6600,7 @@ rec {
             packageId = "tokio";
             optional = true;
             usesDefaultFeatures = false;
-            features = [ "sync" "rt" ];
+            features = [ "sync" "rt" "time" ];
           }
           {
             name = "tonic";
@@ -6632,17 +6636,15 @@ rec {
         ];
         features = {
           "default" = [ "http-proto" "reqwest-blocking-client" "trace" "metrics" "logs" "internal-logs" ];
-          "experimental-grpc-retry" = [ "grpc-tonic" "opentelemetry_sdk/experimental_async_runtime" "opentelemetry_sdk/rt-tokio" ];
-          "experimental-http-retry" = [ "opentelemetry_sdk/experimental_async_runtime" "opentelemetry_sdk/rt-tokio" "tokio" "httpdate" ];
           "flate2" = [ "dep:flate2" ];
           "grpc-tonic" = [ "tonic" "tonic-types" "prost" "http" "tokio" "opentelemetry-proto/gen-tonic" ];
           "gzip-http" = [ "flate2" ];
           "gzip-tonic" = [ "tonic/gzip" ];
           "http" = [ "dep:http" ];
-          "http-json" = [ "serde_json" "prost" "opentelemetry-http" "opentelemetry-proto/gen-tonic-messages" "opentelemetry-proto/with-serde" "http" "trace" "metrics" ];
-          "http-proto" = [ "prost" "opentelemetry-http" "opentelemetry-proto/gen-tonic-messages" "http" "trace" "metrics" ];
+          "http-json" = [ "serde_json" "prost" "opentelemetry-http" "opentelemetry-proto/gen-tonic-messages" "opentelemetry-proto/with-serde" "http" "httpdate" "trace" "metrics" ];
+          "http-proto" = [ "prost" "opentelemetry-http" "opentelemetry-proto/gen-tonic-messages" "http" "httpdate" "trace" "metrics" ];
           "httpdate" = [ "dep:httpdate" ];
-          "hyper-client" = [ "opentelemetry-http/hyper" ];
+          "hyper-client" = [ "opentelemetry-http/hyper" "tokio" ];
           "integration-testing" = [ "tonic" "prost" "tokio/full" "trace" "logs" ];
           "internal-logs" = [ "opentelemetry_sdk/internal-logs" "opentelemetry/internal-logs" ];
           "logs" = [ "opentelemetry/logs" "opentelemetry_sdk/logs" "opentelemetry-proto/logs" ];
@@ -6651,13 +6653,9 @@ rec {
           "prost" = [ "dep:prost" ];
           "reqwest" = [ "dep:reqwest" ];
           "reqwest-blocking-client" = [ "reqwest/blocking" "opentelemetry-http/reqwest-blocking" ];
-          "reqwest-client" = [ "reqwest" "opentelemetry-http/reqwest" ];
+          "reqwest-client" = [ "reqwest" "opentelemetry-http/reqwest" "tokio" ];
           "reqwest-rustls" = [ "reqwest" "opentelemetry-http/reqwest-rustls" ];
-          "reqwest-rustls-webpki-roots" = [ "reqwest" "opentelemetry-http/reqwest-rustls-webpki-roots" ];
-          "serde" = [ "dep:serde" ];
           "serde_json" = [ "dep:serde_json" ];
-          "serialize" = [ "serde" "serde_json" ];
-          "tls" = [ "tls-ring" ];
           "tls-aws-lc" = [ "tonic/tls-aws-lc" ];
           "tls-provider-agnostic" = [ "tonic/_tls-any" ];
           "tls-ring" = [ "tonic/tls-ring" ];
@@ -6671,13 +6669,13 @@ rec {
           "zstd-http" = [ "zstd" ];
           "zstd-tonic" = [ "tonic/zstd" ];
         };
-        resolvedDefaultFeatures = [ "default" "grpc-tonic" "http" "http-proto" "internal-logs" "logs" "metrics" "opentelemetry-http" "prost" "reqwest" "reqwest-blocking-client" "reqwest-rustls-webpki-roots" "tls" "tls-aws-lc" "tls-ring" "tokio" "tonic" "tonic-types" "trace" ];
+        resolvedDefaultFeatures = [ "default" "grpc-tonic" "http" "http-proto" "httpdate" "internal-logs" "logs" "metrics" "opentelemetry-http" "prost" "reqwest" "reqwest-blocking-client" "reqwest-rustls" "tls-aws-lc" "tls-webpki-roots" "tokio" "tonic" "tonic-types" "trace" ];
       };
       "opentelemetry-proto" = rec {
         crateName = "opentelemetry-proto";
-        version = "0.32.0";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "0f5ny4rpnpq6q5q34b8k2q548rf31rpbxkwjqjwzfqxg3yx5imjn";
+        sha256 = "1bmgs4j2apyq097j2qwm1i688r15gghlp845rldk969jvkfzaxnm";
         libName = "opentelemetry_proto";
         dependencies = [
           {
@@ -6741,9 +6739,9 @@ rec {
       };
       "opentelemetry-semantic-conventions" = rec {
         crateName = "opentelemetry-semantic-conventions";
-        version = "0.32.1";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "0izyyi148774fndrdgcfwxx68l9y2ifn5x2mw8g6clf4lqbsq4y9";
+        sha256 = "0qk9skm77rxhkc4a50cjx7c6vnkqnljrjkqid4l8agpxzqwzcg3s";
         libName = "opentelemetry_semantic_conventions";
         features = {
         };
@@ -6751,21 +6749,24 @@ rec {
       };
       "opentelemetry_sdk" = rec {
         crateName = "opentelemetry_sdk";
-        version = "0.32.1";
+        version = "0.33.1";
         edition = "2021";
-        sha256 = "1ycl11syranrinhgn4c2hlzhyzyvpa06ryxq5mxgzmf4387ghncv";
+        sha256 = "0qb0hq325pxarxjkrr1vmpa3zvx0787gs1kh4281jkcpn8nr2aip";
         dependencies = [
           {
             name = "futures-channel";
             packageId = "futures-channel";
+            optional = true;
           }
           {
             name = "futures-executor";
             packageId = "futures-executor";
+            optional = true;
           }
           {
             name = "futures-util";
             packageId = "futures-util";
+            optional = true;
             usesDefaultFeatures = false;
             features = [ "std" "sink" "async-await-macro" ];
           }
@@ -6796,6 +6797,7 @@ rec {
           {
             name = "thiserror";
             packageId = "thiserror 2.0.21";
+            optional = true;
             usesDefaultFeatures = false;
           }
           {
@@ -6820,6 +6822,7 @@ rec {
         ];
         features = {
           "default" = [ "trace" "metrics" "logs" "internal-logs" ];
+          "experimental_async_runtime" = [ "dep:futures-channel" "dep:futures-executor" "dep:futures-util" "dep:thiserror" ];
           "experimental_logs_batch_log_processor_with_async_runtime" = [ "logs" "experimental_async_runtime" ];
           "experimental_metrics_bound_instruments" = [ "metrics" "opentelemetry/experimental_metrics_bound_instruments" ];
           "experimental_metrics_custom_reader" = [ "metrics" ];
@@ -6829,8 +6832,8 @@ rec {
           "http" = [ "dep:http" ];
           "internal-logs" = [ "opentelemetry/internal-logs" ];
           "jaeger_remote_sampler" = [ "trace" "opentelemetry-http" "http" "serde" "serde_json" "url" "experimental_async_runtime" ];
-          "logs" = [ "opentelemetry/logs" ];
-          "metrics" = [ "opentelemetry/metrics" ];
+          "logs" = [ "opentelemetry/logs" "dep:futures-channel" "dep:futures-executor" "dep:futures-util" ];
+          "metrics" = [ "opentelemetry/metrics" "dep:futures-channel" "dep:futures-executor" "dep:futures-util" "dep:thiserror" ];
           "opentelemetry-http" = [ "dep:opentelemetry-http" ];
           "percent-encoding" = [ "dep:percent-encoding" ];
           "rand" = [ "dep:rand" ];
@@ -6842,7 +6845,7 @@ rec {
           "testing" = [ "opentelemetry/testing" "trace" "metrics" "logs" "tokio/sync" ];
           "tokio" = [ "dep:tokio" ];
           "tokio-stream" = [ "dep:tokio-stream" ];
-          "trace" = [ "opentelemetry/trace" "rand" "percent-encoding" ];
+          "trace" = [ "opentelemetry/trace" "rand" "percent-encoding" "dep:futures-channel" "dep:futures-executor" "dep:futures-util" "dep:thiserror" ];
           "url" = [ "dep:url" ];
         };
         resolvedDefaultFeatures = [ "default" "experimental_async_runtime" "internal-logs" "logs" "metrics" "percent-encoding" "rand" "rt-tokio" "tokio" "tokio-stream" "trace" ];
@@ -9033,12 +9036,6 @@ rec {
             target = { target, features }: ("wasm32" == target."arch" or null);
             features = [ "AbortController" "AbortSignal" "Headers" "Request" "RequestInit" "RequestMode" "Response" "Window" "FormData" "Blob" "BlobPropertyBag" "ServiceWorkerGlobalScope" "RequestCredentials" "File" "ReadableStream" "RequestCache" ];
           }
-          {
-            name = "webpki-roots";
-            packageId = "webpki-roots";
-            optional = true;
-            target = { target, features }: (!("wasm32" == target."arch" or null));
-          }
         ];
         devDependencies = [
           {
@@ -9120,7 +9117,7 @@ rec {
           "webpki-roots" = [ "dep:webpki-roots" ];
           "zstd" = [ "tower-http/decompression-zstd" ];
         };
-        resolvedDefaultFeatures = [ "__rustls" "__rustls-aws-lc-rs" "__tls" "blocking" "default-tls" "json" "query" "rustls" "webpki-roots" ];
+        resolvedDefaultFeatures = [ "__rustls" "__rustls-aws-lc-rs" "__tls" "blocking" "json" "query" "rustls" ];
       };
       "rfc6979" = rec {
         crateName = "rfc6979";
@@ -10890,9 +10887,9 @@ rec {
       };
       "service_conventions" = rec {
         crateName = "service_conventions";
-        version = "0.0.42";
+        version = "0.0.43";
         edition = "2021";
-        sha256 = "12v3zr7hb0ff6hrdi3j8g0m6ddzjz81ypdqc6p97fdhzfpvf8rsn";
+        sha256 = "058rz4q76p1vbqgh7shj6z7ydpmm5rmmqfkcz58ljia4wm3xip8c";
         dependencies = [
           {
             name = "anyhow";
@@ -10971,7 +10968,7 @@ rec {
             name = "opentelemetry-otlp";
             packageId = "opentelemetry-otlp";
             optional = true;
-            features = [ "trace" "grpc-tonic" "http-proto" "reqwest-rustls-webpki-roots" "tls" "tls-aws-lc" ];
+            features = [ "trace" "grpc-tonic" "http-proto" "tls-webpki-roots" "reqwest-rustls" "tls-aws-lc" ];
           }
           {
             name = "opentelemetry-semantic-conventions";
@@ -12636,7 +12633,7 @@ rec {
           "transport" = [ "server" "channel" ];
           "zstd" = [ "dep:zstd" ];
         };
-        resolvedDefaultFeatures = [ "_tls-any" "channel" "codegen" "default" "h2" "router" "server" "tls-aws-lc" "tls-connect-info" "tls-ring" "tls-webpki-roots" "transport" ];
+        resolvedDefaultFeatures = [ "_tls-any" "channel" "codegen" "default" "h2" "router" "server" "tls-aws-lc" "tls-connect-info" "tls-webpki-roots" "transport" ];
       };
       "tonic-prost" = rec {
         crateName = "tonic-prost";
@@ -13267,9 +13264,9 @@ rec {
       };
       "tracing-opentelemetry" = rec {
         crateName = "tracing-opentelemetry";
-        version = "0.33.0";
+        version = "0.34.0";
         edition = "2021";
-        sha256 = "09nvxy5m7nxmifz4b6szdcyczapp2jcgxcac0jw4ax8klz5n9g5d";
+        sha256 = "1zp8wg0yhj6nhv2vc0a182sf6iq8clmgyxxn70vg80mrl414i40a";
         libName = "tracing_opentelemetry";
         dependencies = [
           {
